@@ -1,8 +1,13 @@
 $material-blue-500: #2196F3
 
-@import '_headers'
-@import '_colors'
-@import '_header'
+@import 'colors'
+@import 'header'
+@import 'textfield'
+@import 'table'
+@import 'buttons'
+@import 'other'
+@import 'drawer'
+@import 'hamburgers/hamburgers.scss'
 
 html, body
   padding: 0
@@ -10,9 +15,16 @@ html, body
 
 .header-content-container
   display: flex
-  align-items: center
-  height: 100%
   padding-left: 16px
+  padding-right: 16px
+  align-items: center
 
-.header-title
-  margin-left: 16px
+  h3
+    margin-left: 16px
+    line-height: 24px
+
+  i
+    cursor: pointer
+
+  i:last-child
+    margin-left: 16px

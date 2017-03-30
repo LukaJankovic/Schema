@@ -2,20 +2,38 @@
 <html>
 
 <head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
 
     <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/typography.css" />
 
     <title>Schema</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2196F3">
 </head>
 
 <body>
     <div class="md-header">
         <div class="header-content-container">
-            <i class="material-icons white">menu</i>
+            <button class="hamburger hamburger--arrow" id="md-drawer__trigger" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
             <h3 class="header-title white">Schema</h3>
+            <div class="spacer"></div>
+            <i class="material-icons white">star</i>
+            <i class="material-icons white">today</i>
         </div>
+    </div>
+    <div class="md-drawer md-drawer__hidden" id="drawer">
+        <h1>menu</h1>
     </div>
 </body>
 
