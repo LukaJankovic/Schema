@@ -13,6 +13,7 @@ html, body
   padding: 0
   margin: 0
   height: 100%
+  overflow: hidden
 
 .header-content-container
   display: flex
@@ -38,14 +39,14 @@ html, body
   background-color: rgba(0, 0, 0, 0.16)
 
 .shade-shown
-  display: inherit
+  visibility: visible
   opacity: 1
-  transition: opacity 0.2s
+  transition: all 0.2s
 
 .shade-hidden
-  display: none
+  visibility: hidden
   opacity: 0
-  transition: opacity 0.2s
+  transition: all 0.2s
 
 .title-wrapper
   display: flex
