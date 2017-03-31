@@ -12,6 +12,7 @@ $material-blue-500: #2196F3
 html, body
   padding: 0
   margin: 0
+  height: 100%
 
 .header-content-container
   display: flex
@@ -28,3 +29,18 @@ html, body
 
   i:last-child
     margin-left: 16px
+
+#shade
+  z-index: 2
+  position: absolute
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.16)
+
+.shade-shown
+  opacity: 1
+  transition: all 0.2s
+
+.shade-hidden
+  opacity: 0
+  transition: all 0.2s

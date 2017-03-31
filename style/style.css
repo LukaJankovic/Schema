@@ -5,7 +5,8 @@
   width: 100%;
   height: 64px;
   background-color: #2196F3;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.16);
+  z-index: 50; }
 
 .md-textfield {
   outline: none;
@@ -70,7 +71,9 @@
   position: absolute;
   height: 100%;
   width: 320px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.16);
+  z-index: 50;
+  background-color: white; }
 
 .md-drawer__hidden {
   left: -340px;
@@ -204,9 +207,9 @@
  * Arrow
  */
 .hamburger--arrow.is-active .hamburger-inner::before {
-  transform: translate3d(-3.6px, 0, 0) rotate(-45deg) scale(0.7, 1); }
+  transform: translate3d(-3.6px, 0, 0) rotate(-45deg) scale(0.9, 1); }
 .hamburger--arrow.is-active .hamburger-inner::after {
-  transform: translate3d(-3.6px, 0, 0) rotate(45deg) scale(0.7, 1); }
+  transform: translate3d(-3.6px, 0, 0) rotate(45deg) scale(0.9, 1); }
 
 /*
  * Arrow Right
@@ -678,7 +681,8 @@
 
 html, body {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  height: 100%; }
 
 .header-content-container {
   display: flex;
@@ -692,5 +696,20 @@ html, body {
     cursor: pointer; }
   .header-content-container i:last-child {
     margin-left: 16px; }
+
+#shade {
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.16); }
+
+.shade-shown {
+  opacity: 1;
+  transition: all 0.2s; }
+
+.shade-hidden {
+  opacity: 0;
+  transition: all 0.2s; }
 
 /*# sourceMappingURL=style.css.map */
