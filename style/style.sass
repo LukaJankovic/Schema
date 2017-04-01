@@ -52,5 +52,43 @@ html, body
   display: flex
   align-items: center
 
+.main-content-wrapper
+  width: 100%
+  height: calc(100% - 64px)
+  display: flex
+  flex-grow: 1
+
 .drawer-title
   margin-left: 32px
+
+.day
+  height: 100%
+  width: 20%
+
+  &:first-child
+    border-right: 2px solid black
+
+  &:nth-child(1n+3)
+    border-left: 2px solid black
+
+.monday
+
+.tuesday
+
+.wednesday
+
+.thursday
+
+.friday
+
+.day-header
+  width: 100%
+  height: 32px
+  display: flex
+  justify-content: center
+  border-bottom: 1px solid black
+  padding-bottom: 16px
+
+  h3
+    height: 32px
+    line-height: inherit !important

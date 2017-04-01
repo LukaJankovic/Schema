@@ -68,6 +68,7 @@
     transition: all 0.2s; }
 
 .md-button-fab {
+  outline: none;
   border: none;
   width: 56px;
   height: 56px;
@@ -95,17 +96,18 @@
   position: absolute;
   height: calc(100% - 64px);
   width: 320px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.16);
   z-index: 50;
   background-color: white;
   padding-top: 8px; }
 
 .md-drawer__hidden {
-  left: -340px;
+  left: -320px;
+  box-shadow: 0 0 0 transparent;
   transition: all 0.2s cubic-bezier(0.4, 0, 1, 1); }
 
 .md-drawer__shown {
   left: 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.16);
   transition: all 0.2s cubic-bezier(0, 0, 0.2, 1); }
 
 /*!
@@ -745,7 +747,32 @@ html, body {
   display: flex;
   align-items: center; }
 
+.main-content-wrapper {
+  width: 100%;
+  height: calc(100% - 64px);
+  display: flex;
+  flex-grow: 1; }
+
 .drawer-title {
   margin-left: 32px; }
+
+.day {
+  height: 100%;
+  width: 20%; }
+  .day:first-child {
+    border-right: 2px solid black; }
+  .day:nth-child(1n+3) {
+    border-left: 2px solid black; }
+
+.day-header {
+  width: 100%;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid black;
+  padding-bottom: 16px; }
+  .day-header h3 {
+    height: 32px;
+    line-height: inherit !important; }
 
 /*# sourceMappingURL=style.css.map */
