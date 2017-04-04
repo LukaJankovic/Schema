@@ -7,6 +7,11 @@ var xUp;
 var swiper;
 
 $(document).ready(function() {
+
+    document.body.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+    });
+
     swiper = new Swiper('.swiper-container', {
         direction: 'horizontal',
         loop: false,

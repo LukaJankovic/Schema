@@ -73,7 +73,7 @@
   width: 56px;
   height: 56px;
   border-radius: 28px;
-  position: absolute;
+  position: fixed;
   bottom: 16px;
   right: 16px;
   background-color: #ffc400;
@@ -712,6 +712,9 @@ html, body {
   margin: 0;
   height: 100%;
   overflow: hidden; }
+
+body {
+  position: relative; }
 
 @media screen and (max-width: 768px) {
   .desktop {
