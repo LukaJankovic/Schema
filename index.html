@@ -4,11 +4,14 @@
 <head>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+
     <script src="js/index.js"></script>
+    <script src="js/swipe.js"></script>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.x.x/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
 
     <link rel="stylesheet" href="style/style.css" />
     <link rel="stylesheet" href="style/typography.css" />
@@ -61,7 +64,7 @@
             </div>
         </div>
     </div>
-    <div class="main-content-wrapper">
+    <div class="main-content-wrapper desktop">
         <div class="day monday">
             <div class="day-header">
                 <h3 class="text-subhead">Måndag</h3>
@@ -85,6 +88,40 @@
         <div class="day friday">
             <div class="day-header">
                 <h3 class="text-subhead">Fredag</h3>
+            </div>
+        </div>
+    </div>
+    <div class="main-content-wrapper swiper-container mobile">
+        <div class="swiper-wrapper">
+            <div class="day week swiper-slide">
+                <div class="day-header">
+                    <h3 class="text-subhead">Veckan</h3>
+                </div>
+            </div>
+            <div class="day monday swiper-slide">
+                <div class="day-header">
+                    <h3 class="text-subhead">Måndag</h3>
+                </div>
+            </div>
+            <div class="day tuesday swiper-slide">
+                <div class="day-header">
+                    <h3 class="text-subhead">Tisdag</h3>
+                </div>
+            </div>
+            <div class="day wednesday swiper-slide">
+                <div class="day-header">
+                    <h3 class="text-subhead">Onsdag</h3>
+                </div>
+            </div>
+            <div class="day thursday swiper-slide">
+                <div class="day-header">
+                    <h3 class="text-subhead">Torsdag</h3>
+                </div>
+            </div>
+            <div class="day friday swiper-slide">
+                <div class="day-header">
+                    <h3 class="text-subhead">Fredag</h3>
+                </div>
             </div>
         </div>
     </div>

@@ -15,6 +15,20 @@ html, body
   height: 100%
   overflow: hidden
 
+.desktop
+  @media screen and (max-width: 768px)
+    display: none !important
+
+  @media screen and (min-width: 1200px)
+    display: flex !important
+
+.mobile
+  @media screen and (max-width: 768px)
+    display: inherit !important
+
+  @media screen and (min-width: 1200px)
+    display: none !important
+
 .header-content-container
   display: flex
   padding-left: 16px
@@ -70,6 +84,9 @@ html, body
 
   &:nth-child(1n+3)
     border-left: 2px solid black
+
+  @media screen and (max-width: 768px)
+    border: none !important
 
 .monday
 

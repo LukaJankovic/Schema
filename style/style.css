@@ -713,6 +713,20 @@ html, body {
   height: 100%;
   overflow: hidden; }
 
+@media screen and (max-width: 768px) {
+  .desktop {
+    display: none !important; } }
+@media screen and (min-width: 1200px) {
+  .desktop {
+    display: flex !important; } }
+
+@media screen and (max-width: 768px) {
+  .mobile {
+    display: inherit !important; } }
+@media screen and (min-width: 1200px) {
+  .mobile {
+    display: none !important; } }
+
 .header-content-container {
   display: flex;
   padding-left: 16px;
@@ -763,6 +777,9 @@ html, body {
     border-right: 2px solid black; }
   .day:nth-child(1n+3) {
     border-left: 2px solid black; }
+  @media screen and (max-width: 768px) {
+    .day {
+      border: none !important; } }
 
 .day-header {
   width: 100%;
