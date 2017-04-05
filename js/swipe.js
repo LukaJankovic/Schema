@@ -8,10 +8,6 @@ var swiper;
 
 $(document).ready(function() {
 
-    document.body.addEventListener('touchstart', function(e) {
-        e.preventDefault();
-    });
-
     swiper = new Swiper('.swiper-container', {
         direction: 'horizontal',
         loop: false,
@@ -60,8 +56,6 @@ $(document).ready(function() {
     //Sliding drawer
     $(".swiper-container, #shade, .md-drawer").on("touchstart", function(e) {
 
-        console.log("touch");
-
         let x = getX(e);
 
         xDown = x;
@@ -82,20 +76,31 @@ $(document).ready(function() {
     })
 
     $(".swiper-container, #shade, .md-drawer").on("touchmove", function(e) {
+
         let x = getX(e);
         let left;
 
+        var drawer = document.getElementById("drawer");
+
         if (menuOpening == true) {
             left = Math.min(0, -320 + x - xDown);
+
+            if (dontOpen == false) {
+                $("#drawer").attr("class", "md-drawer");
+                $("#drawer").attr("style", `left:${left}px`);
+
+                $("#shade").attr("class", "shade-transitioning");
+                $("#shade").attr("style", "background-color: rgba(0, 0, 0, " + ((1 + (left / 320)) * 0.27) + ")");
+            }
         } else {
             left = Math.min(0, x - Math.min(xDown, 320));
-        }
 
-        if (dontOpen == false) {
-            $("#drawer").attr("style", "left:" + parseInt(left) + "px");
+            if (dontOpen == false) {
+                $("#drawer").attr("style", `left:${left}px`);
 
-            $("#shade").attr("class", "shade-shown");
-            $("#shade").attr("style", "background-color: rgba(0, 0, 0, " + ((1 + (left / 320)) * 0.27) + ")");
+                $("#shade").attr("class", "shade-shown");
+                $("#shade").attr("style", "background-color: rgba(0, 0, 0, " + ((1 + (left / 320)) * 0.27) + ")");
+            }
         }
     })
     $(".swiper-container, #shade, .md-drawer").on("touchend", function(e) {
