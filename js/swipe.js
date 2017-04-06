@@ -11,6 +11,8 @@ $(document).ready(function() {
     swiper = new Swiper('.swiper-container', {
         direction: 'horizontal',
         loop: false,
+        preventClicks: false,
+        preventClicksPropagation: false
     })
 
     //Opening and closing drawer

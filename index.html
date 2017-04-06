@@ -9,6 +9,7 @@
     <script src="js/inobounce.min.js"></script>
     <script src="js/index.js"></script>
     <script src="js/swipe.js"></script>
+    <script src="js/dialog.js"></script>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
@@ -37,8 +38,8 @@
             <i class="material-icons white">today</i>
         </div>
     </div>
-    <div id="shade" class="shade-hidden">
-    </div>
+    <div id="shade" class="shade-hidden"></div>
+    <div id="shade-full" class="shade-hidden"></div>
     <div class="md-drawer md-drawer__hidden" id="drawer">
         <div class="md-row-hover">
             <div class="title-wrapper">
@@ -64,6 +65,8 @@
                 <h3 class="drawer-title text-subhead dark">Om</h3>
             </div>
         </div>
+    </div>
+    <div class="md-dialog md-dialog__hidden" id="add-dialog">
     </div>
     <div class="main-content-wrapper desktop">
         <div class="day monday">
@@ -121,7 +124,7 @@
             </div>
         </div>
     </div>
-    <button class="md-button-fab">
+    <button class="md-button-fab" id="add-button">
         <i class="material-icons">add</i>
     </button>
 </body>

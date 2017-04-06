@@ -1,0 +1,27 @@
+.md-dialog
+  position: absolute
+  left: 0
+  right: 0
+  top: 50%
+  bottom: 0
+  margin: auto
+  width: 350px
+  height: 500px
+  z-index: 50
+  background-color: white
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.16)
+  border-radius: 2px
+
+.md-dialog__hidden
+  visibility: hidden
+  opacity: 0
+  transition: all 0.3s ease-in-out
+  transform: translateY(calc(-50% + 25px))
+
+.md-dialog__shown
+  visibility: visible
+  opacity: 1
+  transition: all 0.3s ease-in-out
+  -webkit-transform: translateY(-50%)
+  -ms-transform: translateY(-50%)
+  transform: translateY(-50%)
