@@ -18,11 +18,7 @@ $(function() {
         showDialog();
     });
 
-    $("#add-dialog").click(function() {
-        hideDialog();
-    })
-
     $("#shade-full").click(function() {
         hideDialog();
-    })
+    });
 })

@@ -128,7 +128,10 @@
   z-index: 50;
   background-color: white;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.16);
-  border-radius: 2px; }
+  border-radius: 2px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 24px; }
 
 .md-dialog__hidden {
   visibility: hidden;
@@ -143,6 +146,167 @@
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
+
+.md-textfield {
+  outline: none;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.38);
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  background-color: transparent; }
+  .md-textfield:focus {
+    border-bottom: 2px solid #2196F3; }
+
+.md-textfield-jscolor {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.38);
+  font-family: "Roboto", sans-serif; }
+
+/* Checkboxes
+   ========================================================================== */
+/* CUSTOM CSS CHECKBOXES */
+form p {
+  margin-bottom: 10px;
+  text-align: left; }
+
+form p:last-child {
+  margin-bottom: 0; }
+
+/* Remove default checkbox */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+  opacity: 0; }
+
+[type="checkbox"] {
+  /* checkbox aspect */ }
+  [type="checkbox"] + label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    font-size: 1rem;
+    -webkit-user-select: none;
+    /* webkit (safari, chrome) browsers */
+    -moz-user-select: none;
+    /* mozilla browsers */
+    -khtml-user-select: none;
+    /* webkit (konqueror) browsers */
+    -ms-user-select: none;
+    /* IE10+ */ }
+  [type="checkbox"] + label:before, [type="checkbox"]:not(.filled-in) + label:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    z-index: 0;
+    border: 2px solid #5a5a5a;
+    border-radius: 1px;
+    margin-top: 2px;
+    transition: .2s; }
+  [type="checkbox"]:not(.filled-in) + label:after {
+    border: 0;
+    transform: scale(0); }
+  [type="checkbox"]:not(:checked):disabled + label:before {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.26); }
+  [type="checkbox"].tabbed:focus + label:after {
+    transform: scale(1);
+    border: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.1); }
+
+[type="checkbox"]:checked + label:before {
+  top: -4px;
+  left: -5px;
+  width: 12px;
+  height: 22px;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid #2196F3;
+  border-bottom: 2px solid #2196F3;
+  transform: rotate(40deg);
+  backface-visibility: hidden;
+  transform-origin: 100% 100%; }
+[type="checkbox"]:checked:disabled + label:before {
+  border-right: 2px solid rgba(0, 0, 0, 0.26);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.26); }
+
+[type="checkbox"].filled-in + label:after {
+  border-radius: 2px; }
+[type="checkbox"].filled-in + label:before,
+[type="checkbox"].filled-in + label:after {
+  content: '';
+  left: 0;
+  position: absolute;
+  /* .1s delay is for check animation */
+  transition: border .25s, background-color .25s, width .20s .1s, height .20s .1s, top .20s .1s, left .20s .1s;
+  z-index: 1; }
+[type="checkbox"].filled-in:not(:checked) + label:before {
+  width: 0;
+  height: 0;
+  border: 3px solid transparent;
+  left: 6px;
+  top: 10px;
+  -webkit-transform: rotateZ(37deg);
+  transform: rotateZ(37deg);
+  -webkit-transform-origin: 20% 40%;
+  transform-origin: 100% 100%; }
+[type="checkbox"].filled-in:not(:checked) + label:after {
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  border: 2px solid #5a5a5a;
+  top: 0px;
+  z-index: 0; }
+[type="checkbox"].filled-in:checked + label:before {
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 13px;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  -webkit-transform: rotateZ(37deg);
+  transform: rotateZ(37deg);
+  -webkit-transform-origin: 100% 100%;
+  transform-origin: 100% 100%; }
+[type="checkbox"].filled-in:checked + label:after {
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #2196F3;
+  background-color: #2196F3;
+  z-index: 0; }
+[type="checkbox"].filled-in.tabbed:focus + label:after {
+  border-radius: 2px;
+  border-color: #5a5a5a;
+  background-color: rgba(0, 0, 0, 0.1); }
+[type="checkbox"].filled-in.tabbed:checked:focus + label:after {
+  border-radius: 2px;
+  background-color: #2196F3;
+  border-color: #2196F3; }
+[type="checkbox"].filled-in:disabled:not(:checked) + label:before {
+  background-color: transparent;
+  border: 2px solid transparent; }
+[type="checkbox"].filled-in:disabled:not(:checked) + label:after {
+  border-color: transparent;
+  background-color: #BDBDBD; }
+[type="checkbox"].filled-in:disabled:checked + label:before {
+  background-color: transparent; }
+[type="checkbox"].filled-in:disabled:checked + label:after {
+  background-color: #BDBDBD;
+  border-color: #BDBDBD; }
 
 /*!
  * Hamburgers
@@ -770,14 +934,16 @@ body {
   padding-right: 16px;
   align-items: center; }
   .header-content-container h3 {
-    margin-left: 16px; }
+    margin-left: 16px;
+    line-height: 23px;
+    height: 22px; }
   .header-content-container i {
     cursor: pointer; }
   .header-content-container i:last-child {
     margin-left: 16px; }
 
 #shade {
-  z-index: 2;
+  z-index: 4;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -842,5 +1008,20 @@ body {
 
 #add-button {
   z-index: 3; }
+
+#add-dialog input {
+  width: 100%;
+  margin-top: 20px; }
+#add-dialog label {
+  width: 100%;
+  margin-top: 20px; }
+#add-dialog .add-dialog-buttons {
+  position: absolute;
+  display: flex;
+  bottom: 16px;
+  justify-content: flex-end;
+  width: calc(100% - 48px); }
+  #add-dialog .add-dialog-buttons button {
+    color: #2196F3; }
 
 /*# sourceMappingURL=style.css.map */

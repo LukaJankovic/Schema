@@ -8,6 +8,8 @@ $material-blue-500: #2196F3
 @import 'other'
 @import 'drawer'
 @import 'dialog'
+@import 'textfield'
+@import 'checkbox'
 @import 'hamburgers/hamburgers.scss'
 
 html, body
@@ -41,6 +43,8 @@ body
 
   h3
     margin-left: 16px
+    line-height: 23px
+    height: 22px
 
   i
     cursor: pointer
@@ -49,7 +53,7 @@ body
     margin-left: 16px
 
 #shade
-  z-index: 2
+  z-index: 4
   position: absolute
   width: 100%
   height: 100%
@@ -127,3 +131,19 @@ body
 
 #add-button
   z-index: 3
+
+#add-dialog
+  input
+    width: 100%
+    margin-top: 20px
+  label
+    width: 100%
+    margin-top: 20px
+  .add-dialog-buttons
+    position: absolute
+    display: flex
+    bottom: 16px
+    justify-content: flex-end
+    width: calc(100% - 48px)
+    button
+      color: $material-blue-500

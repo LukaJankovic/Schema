@@ -26,10 +26,9 @@ $(document).ready(function() {
         }
     })
 
-    $(window).click(function() {
-        if (menuOpen && !eventHandled) {
-            closeMenu();
-        }
+    $("#shade").click(function() {
+      console.log("click");
+        closeMenu();
         eventHandled = false;
     })
 
