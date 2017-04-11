@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+
+    <script src="js/datalist.polyfill.min.js"></script>
+    <script src="js/inobounce.min.js"></script>
+    <script src="js/js.cookie.js"></script>
+
+    <script src="js/index.js"></script>
+    <script src="js/add-schema.js"></script>
+    <script src="js/cookie.js"></script>
+    <script src="js/swipe.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/typography.css" />
+    <link rel="stylesheet" href="style/datalist-polyfill.css" />
+
+    <title>Schema</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-sacle=1, maximum-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#2196F3">
+</head>
+
+<body class="swiper-container">
+    <div class="md-header">
+        <div class="header-content-container">
+            <button class="hamburger hamburger--arrow" id="md-drawer__trigger" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <h3 class="header-title white">Schema</h3>
+        </div>
+        <div class="add-card">
+            <h2>Lägg till klass</h2>
+            <input id="add-skola" type="text" class="md-textfield" list="skolor" id="school-list" placeholder="Skola" autocomplete="off" />
+            <datalist id="skolor">
+          </datalist>
+            <input id="add-klass" type="text" class="md-textfield" placeholder="Klass" autocomplete="off" />
+            <div class="add-dialog-buttons">
+                <button class="md-button-flat" id="cancel">AVBRYT</button>
+                <button class="md-button-flat" id="add">LÄGG TILL</button>
+            </div>
+        </div>
+    </div>
+    <div id="shade" class="shade-hidden"></div>
+    <div class="md-drawer md-drawer__hidden" id="drawer">
+        <div class="md-row-hover" onclick="location.href = 'https://lserver.alite.am/apps/schema';">
+            <div class="title-wrapper">
+                <i class="material-icons dark">today</i>
+                <h3 class="drawer-title text-subhead dark">Schema</h3>
+            </div>
+        </div>
+        <div class="md-row-hover">
+            <div class="title-wrapper">
+                <i class="material-icons dark">restaurant</i>
+                <h3 class="drawer-title text-subhead dark">Skolmat</h3>
+            </div>
+        </div>
+        <div class="md-row-hover">
+            <div class="title-wrapper">
+                <i class="material-icons dark">settings</i>
+                <h3 class="drawer-title text-subhead dark">Inställningar</h3>
+            </div>
+        </div>
+        <div class="md-row-hover">
+            <div class="title-wrapper">
+                <i class="material-icons dark">info</i>
+                <h3 class="drawer-title text-subhead dark">Om</h3>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -8,7 +8,10 @@
 
     <script src="js/datalist.polyfill.min.js"></script>
     <script src="js/inobounce.min.js"></script>
+    <script src="js/js.cookie.js"></script>
+
     <script src="js/index.js"></script>
+    <script src="js/cookie.js"></script>
     <script src="js/swipe.js"></script>
     <script src="js/dialog.js"></script>
 
@@ -69,19 +72,15 @@
             </div>
         </div>
     </div>
-    <div class="md-dialog md-dialog__hidden" id="add-dialog">
+    <div class="md-dialog md-dialog__hide" id="add-dialog">
         <h2>Lägg till klass</h2>
-        <input type="text" class="md-textfield" list="skolor" id="school-list" placeholder="Skola" autocomplete="off" />
+        <input id="add-skola" type="text" class="md-textfield" list="skolor" id="school-list" placeholder="Skola" autocomplete="off" />
         <datalist id="skolor">
         </datalist>
-        <input type="text" class="md-textfield" placeholder="Klass" autocomplete="off" />
-        <input type="checkbox" class="filled-in" id="box-schema" checked="checked" />
-        <label for="box-schema">Schema</label>
-        <input type="checkbox" class="filled-in" id="box-food" checked="checked" />
-        <label for="box-food">Skolmat</label>
+        <input id="add-klass" type="text" class="md-textfield" placeholder="Klass" autocomplete="off" />
         <div class="add-dialog-buttons">
-            <button class="md-button-flat">AVBRYT</button>
-            <button class="md-button-flat">LÄGG TILL</button>
+            <button class="md-button-flat" id="cancel">AVBRYT</button>
+            <button class="md-button-flat" id="add">LÄGG TILL</button>
         </div>
     </div>
     <div class="main-content-wrapper desktop">
