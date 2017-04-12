@@ -1,16 +1,20 @@
-addClass = function(school, id) {
+addClass = function(school, name, id) {
     console.log("school " + school);
     console.log("id " + id);
 
-    schema = JSON.parse(Cookies.get('schema'));
+    schema = Cookies.get('schema');
 
-    if (schema == null) {
+    console.log(schema);
+
+    if (typeof(schema) == 'undefined') {
         schema = [];
+    } else {
+        schema = JSON.parse(schema);
     }
 
     var err = 0;
     for (var i = 0; i < schema.length; i++) {
-        if (schema[i]["id"] == id && schema[i]["school"] == school) {
+        if (schema[i]["id"] == id && schema[i]["school"] == school && schema[i]["name"] == name) {
             err = 1;
         }
     }
@@ -18,7 +22,8 @@ addClass = function(school, id) {
     if (err == 0) {
         schema.push({
             "school": school,
-            "id": id
+            "id": id,
+            "name": name
         });
     }
 

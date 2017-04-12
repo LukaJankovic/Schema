@@ -6,6 +6,9 @@ var xDown;
 var xUp;
 var swiper;
 
+let openMenu;
+let closeMenu;
+
 $(document).ready(function() {
 
     swiper = new Swiper('.swiper-container', {
