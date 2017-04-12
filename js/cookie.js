@@ -24,3 +24,7 @@ addClass = function(school, id) {
 
     Cookies.set('schema', schema);
 }
+
+getSchemaFavourites = function() {
+    return JSON.parse(Cookies.get('schema'));
+}

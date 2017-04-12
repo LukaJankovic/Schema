@@ -14,6 +14,7 @@
     <script src="js/cookie.js"></script>
     <script src="js/swipe.js"></script>
     <script src="js/dialog.js"></script>
+    <script src="js/menu.js"></script>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
@@ -40,7 +41,18 @@
             </button>
             <h3 class="header-title white">Schema</h3>
             <div class="spacer"></div>
-            <i class="material-icons white">star</i>
+            <div id="fav-container" class="item-container">
+                <i class="material-icons white">star</i>
+                <div class="md-menu md-menu__hidden" id="favourites-menu">
+                    <div class="md-menu-item">
+                        Test
+                        <div class="fav-item-actions">
+                            <i class="material-icons">star_border</i>
+                            <i class="material-icons">delete</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <i class="material-icons white">today</i>
         </div>
     </div>
@@ -83,7 +95,7 @@
             <button class="md-button-flat" id="add">LÄGG TILL</button>
         </div>
     </div>
-    <div class="main-content-wrapper desktop">
+      <div class="main-content-wrapper desktop">
         <div class="day monday">
             <div class="day-header">
                 <h3 class="text-subhead">Måndag</h3>

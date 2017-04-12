@@ -12,9 +12,11 @@
   @media screen and (max-width: 768px) {
     .md-header {
       height: 58px; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     .md-header {
       height: 64px; } }
+  .md-header * {
+    user-select: none; }
 
 .md-textfield {
   outline: none;
@@ -313,6 +315,41 @@ form p:last-child {
 [type="checkbox"].filled-in:disabled:checked + label:after {
   background-color: #BDBDBD;
   border-color: #BDBDBD; }
+
+.md-menu {
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 21;
+  background-color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.16); }
+
+.md-menu__hidden {
+  transition: all 0.2s ease-in;
+  transform: scale(0);
+  transform-origin: 100% 0%; }
+
+.md-menu__shown {
+  transition: all 0.2s ease-in;
+  transform: scale(1);
+  transform-origin: 100% 0%; }
+
+.md-menu-item {
+  height: 43px;
+  background-color: white;
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  justify-content: space-between;
+  background-color: white;
+  transition: background-color 0.1s;
+  cursor: pointer; }
+  .md-menu-item:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+    transition: background-color 0.1s; }
 
 /*!
  * Hamburgers
@@ -912,24 +949,27 @@ form p:last-child {
     transform: rotate(-90deg); }
 
 html, body {
+  overflow: hidden;
   padding: 0;
-  margin: 0;
+  margin: 0; }
+
+html {
   height: 100.1%; }
 
 body {
-  position: relative; }
+  height: 100%; }
 
 @media screen and (max-width: 768px) {
   .desktop {
     display: none !important; } }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .desktop {
     display: flex !important; } }
 
 @media screen and (max-width: 768px) {
   .mobile {
     display: inherit !important; } }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .mobile {
     display: none !important; } }
 
@@ -944,6 +984,9 @@ body {
     height: 22px; }
   .header-content-container i {
     cursor: pointer; }
+  .header-content-container .item-container {
+    height: 24px;
+    width: 24px; }
   .header-content-container i:last-child {
     margin-left: 16px; }
 
@@ -984,7 +1027,8 @@ body {
   width: 100%;
   height: calc(100% - 64px);
   display: flex;
-  flex-grow: 1; }
+  flex-grow: 1;
+  z-index: 0; }
 
 .drawer-title {
   margin-left: 32px; }
@@ -1057,5 +1101,14 @@ body {
     width: calc(100% - 32px); }
     .add-card .add-dialog-buttons button {
       color: #2196F3; }
+
+#favourites-menu {
+  width: 280px; }
+  #favourites-menu .fav-item-actions {
+    display: flex;
+    align-items: center; }
+
+#fav-container {
+  position: relative; }
 
 /*# sourceMappingURL=style.css.map */

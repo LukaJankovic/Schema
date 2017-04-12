@@ -10,28 +10,32 @@ $material-blue-500: #2196F3
 @import 'dialog'
 @import 'textfield'
 @import 'checkbox'
+@import 'menu'
 @import 'hamburgers/hamburgers.scss'
 
 html, body
+  overflow: hidden
   padding: 0
   margin: 0
+
+html
   height: 100.1%
 
 body
-  position: relative
+  height: 100%
 
 .desktop
   @media screen and (max-width: 768px)
     display: none !important
 
-  @media screen and (min-width: 1200px)
+  @media screen and (min-width: 768px)
     display: flex !important
 
 .mobile
   @media screen and (max-width: 768px)
     display: inherit !important
 
-  @media screen and (min-width: 1200px)
+  @media screen and (min-width: 768px)
     display: none !important
 
 .header-content-container
@@ -47,6 +51,10 @@ body
 
   i
     cursor: pointer
+
+  .item-container
+    height: 24px
+    width: 24px
 
   i:last-child
     margin-left: 16px
@@ -89,6 +97,7 @@ body
   height: calc(100% - 64px)
   display: flex
   flex-grow: 1
+  z-index: 0
 
 .drawer-title
   margin-left: 32px
@@ -175,3 +184,12 @@ body
     width: calc(100% - 32px)
     button
       color: $material-blue-500
+
+#favourites-menu
+  width: 280px
+  .fav-item-actions
+    display: flex
+    align-items: center
+
+#fav-container
+  position: relative
