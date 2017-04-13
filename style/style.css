@@ -4,6 +4,9 @@
 .dark {
   color: rgba(0, 0, 0, 0.67); }
 
+.star {
+  color: #FFC107; }
+
 .md-header {
   width: 100%;
   background-color: #2196F3;
@@ -354,6 +357,17 @@ form p:last-child {
   .md-menu-item p {
     cursor: pointer;
     padding-right: 8px; }
+
+.md-menu-item__selected {
+  height: 43px;
+  background-color: white;
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.08); }
 
 /*!
  * Hamburgers

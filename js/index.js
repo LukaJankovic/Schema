@@ -1,4 +1,5 @@
 let loadSchemaFavourites;
+let selected = 0;
 
 $(function() {
     $.getJSON('https://lserver.alite.am/apps/schema/res/schools.json', function(data) {
@@ -12,6 +13,8 @@ $(function() {
         loadPolyfill();
         loadSchemaFavourites();
     });
+
+    selected = getSchemaFavourite();
 });
 
 loadSchemaFavourites = function() {
@@ -19,13 +22,45 @@ loadSchemaFavourites = function() {
     $("#favourites-menu").empty();
 
     for (var i = 0; i < getSchemaFavourites().length; i++) {
-        let fav = $("<div class='md-menu-item'><p>" + getSchemaFavourites()[i].name + " - " + getSchemaFavourites()[i].id + "</p><div class='fav-item-actions'><i class='material-icons'>star_border</i><i class='material-icons delete-item' id="+i+">delete</i></div></div>");
+
+        let star = "star_border";
+        let color = "black";
+
+        if (i == getSchemaFavourite()) {
+            star = "star";
+            color = "star";
+        }
+
+        let fav = $("<div class='md-menu-item'><p class='select-schema-item' id="+i+">" + getSchemaFavourites()[i].name + " - " + getSchemaFavourites()[i].id + "</p><div class='fav-item-actions'><i class='favourite-schema-item material-icons "+color+"' id="+i+">"+star+"</i><i class='material-icons delete-schema-item' id="+i+">delete</i></div></div>");
+
+        if (i == selected) {
+            fav.attr("class", "md-menu-item__selected");
+        }
+
         $("#favourites-menu").append(fav);
     }
 
-    $(".delete-item").click(function(sender) {
+    $(".delete-schema-item").click(function(sender) {
         deleteClass($(sender.target).attr("id"));
         loadSchemaFavourites();
+    });
+
+    $(".favourite-schema-item").click(function(sender) {
+        if (getSchemaFavourite() == $(sender.target).attr("id")) {
+            setSchemaFavourite(0);
+        }
+
+        else {
+            setSchemaFavourite($(sender.target).attr("id"));
+        }
+
+        loadSchemaFavourites();
+    })
+
+    $(".select-schema-item").click(function(sender) {
+        selected = $(sender.target).attr("id");
+        loadSchemaFavourites();
+        // TODO: reload schema
     })
 }
 

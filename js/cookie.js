@@ -31,14 +31,24 @@ addClass = function(school, name, id) {
 }
 
 deleteClass = function(id) {
-    console.log(id);
     var nSchema = getSchemaFavourites();
-    console.log(nSchema);
-    nSchema.splice(id,1)
-    console.log(nSchema);
+    nSchema.splice(id, 1)
     Cookies.set('schema', nSchema);
+
+    if (nSchema.length < getSchemaFavourite()) {
+        setSchemaFavourite(0);
+    }
 }
 
 getSchemaFavourites = function() {
     return JSON.parse(Cookies.get('schema'));
+}
+
+setSchemaFavourite = function(id) {
+    console.log(id);
+    Cookies.set('schema-favourite', id);
+}
+
+getSchemaFavourite = function() {
+    return Cookies.get('schema-favourite');
 }
