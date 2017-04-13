@@ -345,11 +345,15 @@ form p:last-child {
   padding-right: 16px;
   justify-content: space-between;
   background-color: white;
-  transition: background-color 0.1s;
-  cursor: pointer; }
+  transition: background-color 0.1s; }
   .md-menu-item:hover {
     background-color: rgba(0, 0, 0, 0.08);
     transition: background-color 0.1s; }
+  .md-menu-item i {
+    cursor: pointer; }
+  .md-menu-item p {
+    cursor: pointer;
+    padding-right: 8px; }
 
 /*!
  * Hamburgers
@@ -1102,11 +1106,15 @@ body {
     .add-card .add-dialog-buttons button {
       color: #2196F3; }
 
-#favourites-menu {
-  width: 280px; }
-  #favourites-menu .fav-item-actions {
-    display: flex;
-    align-items: center; }
+@media screen and (min-width: 768px) {
+  #favourites-menu {
+    width: 448px; } }
+@media screen and (max-width: 768px) {
+  #favourites-menu {
+    width: 280px; } }
+#favourites-menu .fav-item-actions {
+  display: flex;
+  align-items: center; }
 
 #fav-container {
   position: relative; }

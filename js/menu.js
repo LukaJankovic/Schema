@@ -1,9 +1,12 @@
 var favOpen = false;
 
 $(function() {
-    $("#fav-container").click(function(event) {
 
+    $("#fav-container").click(function(event) {
         event.stopPropagation();
+    })
+
+    $("#star-button").click(function() {
 
         if (favOpen == true) {
             $("#favourites-menu").attr("class", "md-menu md-menu__hidden");

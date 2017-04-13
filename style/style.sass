@@ -186,7 +186,10 @@ body
       color: $material-blue-500
 
 #favourites-menu
-  width: 280px
+  @media screen and (min-width: 768px)
+    width: 448px
+  @media screen and (max-width: 768px)
+    width: 280px
   .fav-item-actions
     display: flex
     align-items: center

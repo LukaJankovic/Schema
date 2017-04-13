@@ -19,10 +19,14 @@ loadSchemaFavourites = function() {
     $("#favourites-menu").empty();
 
     for (var i = 0; i < getSchemaFavourites().length; i++) {
-        let fav = $("<div class='md-menu-item'>" + getSchemaFavourites()[i].name + " - " + getSchemaFavourites()[i].id + "<div class='fav-item-actions'><i class='material-icons'>star_border</i><i class='material-icons'>delete</i></div></div>");
-        console.log(fav);
+        let fav = $("<div class='md-menu-item'><p>" + getSchemaFavourites()[i].name + " - " + getSchemaFavourites()[i].id + "</p><div class='fav-item-actions'><i class='material-icons'>star_border</i><i class='material-icons delete-item' id="+i+">delete</i></div></div>");
         $("#favourites-menu").append(fav);
     }
+
+    $(".delete-item").click(function(sender) {
+        deleteClass($(sender.target).attr("id"));
+        loadSchemaFavourites();
+    })
 }
 
 $(document).keyup(function(e) {

@@ -30,6 +30,15 @@ addClass = function(school, name, id) {
     Cookies.set('schema', schema);
 }
 
+deleteClass = function(id) {
+    console.log(id);
+    var nSchema = getSchemaFavourites();
+    console.log(nSchema);
+    nSchema.splice(id,1)
+    console.log(nSchema);
+    Cookies.set('schema', nSchema);
+}
+
 getSchemaFavourites = function() {
     return JSON.parse(Cookies.get('schema'));
 }
