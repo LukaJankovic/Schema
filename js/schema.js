@@ -41,7 +41,8 @@ loadSchema = function() {
                         start: data.days[i].lessons[a].startmin,
                         end: data.days[i].lessons[a].endmin,
                         startt: data.days[i].lessons[a].start,
-                        endt: data.days[i].lessons[a].end
+                        endt: data.days[i].lessons[a].end,
+                        subject: data.days[i].lessons[a].subject
                     });
                 } else {
                     var exists = -1;
@@ -57,7 +58,8 @@ loadSchema = function() {
                             start: data.days[i].lessons[a].startmin,
                             end: data.days[i].lessons[a].endmin,
                             startt: data.days[i].lessons[a].start,
-                            endt: data.days[i].lessons[a].end
+                            endt: data.days[i].lessons[a].end,
+                            subject: data.days[i].lessons[a].subject
                         });
                     } else {
                         lessons[exists].info = lessons[exists].info + "<br />" + data.days[i].lessons[a].info;
@@ -85,6 +87,11 @@ generateDivForDay = function(day, id) {
         let container = $("<div></div>");
         container.attr("class", "schema-item");
         container.attr("style", "height: " + (day[i].end - day[i].start) * minuteHeight + "px;");
+
+        if (typeof day[i].subject != "undefined") {
+            var color = generateColorForLesson(day[i].subject);
+            container.attr("style", "height: " + (day[i].end - day[i].start) * minuteHeight + "px; background-color: " + color + ";");
+        }
 
         let infoContainer = $("<div></div>");
         infoContainer.attr("class", "schema-item-text-wrapper");

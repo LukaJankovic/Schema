@@ -45,10 +45,36 @@ getSchemaFavourites = function() {
 }
 
 setSchemaFavourite = function(id) {
-    console.log(id);
     Cookies.set('schema-favourite', id);
 }
 
 getSchemaFavourite = function() {
     return Cookies.get('schema-favourite');
+}
+
+generateColorForLesson = function(lesson, callback) {
+
+    var id = md5(lesson);
+    var color = "";
+
+    $.ajax({
+        url: 'https://lserver.alite.am/apps/schema/res/color-palette.json',
+        async: false,
+        dataType: 'json',
+        success: function(data) {
+            color = data[pickRandomProperty(data)].shade_A700;
+            //callback(color);
+        }
+    });
+
+    return color;
+}
+
+function pickRandomProperty(obj) {
+    var result;
+    var count = 0;
+    for (var prop in obj)
+        if (Math.random() < 1 / ++count)
+            result = prop;
+    return result;
 }
