@@ -92,9 +92,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: box-shadow 0.2s; }
+  transition: box-shadow 0.2s;
+  opacity: 0.5;
+  transition: opacity 0.2s; }
   .md-button-fab:hover {
     box-shadow: 0 6px 9px rgba(0, 0, 0, 0.16), 0 6px 9px rgba(0, 0, 0, 0.23);
+    opacity: 1;
     transition: all 0.2s; }
   .md-button-fab i {
     width: 100%;
@@ -368,6 +371,33 @@ form p:last-child {
   padding-right: 16px;
   justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.08); }
+
+.schema-item {
+  box-sizing: border-box;
+  width: 100%;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  background-color: #448AFF;
+  color: white;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  justify-content: space-between; }
+
+.schema-item-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.schema-item-time-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.schema-item-time-wrapper__small {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 
 /*!
  * Hamburgers
@@ -1053,7 +1083,9 @@ body {
 
 .day {
   height: 100%;
-  width: 20%; }
+  width: 20%;
+  display: flex;
+  flex-direction: column; }
   .day:first-child {
     border-right: 2px solid black; }
   .day:nth-child(1n+3) {

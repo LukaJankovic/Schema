@@ -60,7 +60,7 @@ loadSchemaFavourites = function() {
     $(".select-schema-item").click(function(sender) {
         selected = $(sender.target).attr("id");
         loadSchemaFavourites();
-        // TODO: reload schema
+        loadSchema();
     })
 }
 

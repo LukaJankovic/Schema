@@ -11,6 +11,7 @@ $material-blue-500: #2196F3
 @import 'textfield'
 @import 'checkbox'
 @import 'menu'
+@import 'schema'
 @import 'hamburgers/hamburgers.scss'
 
 html, body
@@ -105,6 +106,8 @@ body
 .day
   height: 100%
   width: 20%
+  display: flex
+  flex-direction: column
 
   &:first-child
     border-right: 2px solid black
@@ -114,16 +117,6 @@ body
 
   @media screen and (max-width: 768px)
     border: none !important
-
-.monday
-
-.tuesday
-
-.wednesday
-
-.thursday
-
-.friday
 
 .day-header
   width: 100%
