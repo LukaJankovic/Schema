@@ -12,10 +12,10 @@
   background-color: #2196F3;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.16);
   z-index: 20; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1300px) {
     .md-header {
       height: 58px; } }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1300px) {
     .md-header {
       height: 64px; } }
   .md-header * {
@@ -1007,17 +1007,17 @@ html {
 body {
   height: 100%; }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1300px) {
   .desktop {
     display: none !important; } }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1300px) {
   .desktop {
     display: flex !important; } }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1300px) {
   .mobile {
     display: inherit !important; } }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1300px) {
   .mobile {
     display: none !important; } }
 
@@ -1090,7 +1090,7 @@ body {
     border-right: 2px solid black; }
   .day:nth-child(1n+3) {
     border-left: 2px solid black; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1300px) {
     .day {
       border: none !important; } }
 
@@ -1152,10 +1152,10 @@ body {
     .add-card .add-dialog-buttons button {
       color: #2196F3; }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1300px) {
   #favourites-menu {
     width: 448px; } }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1300px) {
   #favourites-menu {
     width: 280px; } }
 #favourites-menu .fav-item-actions {

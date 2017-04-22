@@ -4,14 +4,16 @@ let currentLessons;
 
 $(function() {
     minuteHeight = ($(document).height() - 96) / 630;
-    scheduleWidth = $(".day").css("width");
+    scheduleWidth = parseInt($(".day").css("width"), 10);
 });
 
 $(window).resize(function() {
 
     clearSchema();
     minuteHeight = ($(document).height() - 96) / 630;
-    scheduleWidth = $(".day").css("width");
+    scheduleWidth = parseInt($(".day").css("width"), 10);
+
+    console.log(scheduleWidth);
 
     for (var i = 0; i < currentLessons.length; i++) {
         generateDivForDay(currentLessons[i], i);
@@ -108,8 +110,10 @@ generateDivForDay = function(day, id) {
             timeContainer.html("<div>" + day[i].startt + "</div><div>" + day[i].endt + "</div>");
         }
 
-        timeContainer.attr("style", "font-size:" + scheduleWidth / 2 + "px; line-height:" + scheduleWidth / 2 + "px;");
-        infoContainer.attr("style", "font-size:" + scheduleWidth / 2 + "px; line-height:" + scheduleWidth / 2 + "px;");
+        if ($(window).width() > 1300 && parseInt(scheduleWidth * 0.06) < 17) {
+            timeContainer.attr("style", "font-size:" + parseInt(scheduleWidth * 0.06) + "px;");
+            infoContainer.attr("style", "font-size:" + parseInt(scheduleWidth * 0.06) + "px;");
+        }
 
         container.append(infoContainer);
         container.append(timeContainer);
