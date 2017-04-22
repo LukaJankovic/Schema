@@ -52,7 +52,7 @@ getSchemaFavourite = function() {
     return Cookies.get('schema-favourite');
 }
 
-generateColorForLesson = function(lesson, callback) {
+generateColorForLesson = function(lesson) {
 
     var id = md5(lesson);
     var color = "";
@@ -62,17 +62,17 @@ generateColorForLesson = function(lesson, callback) {
         async: false,
         dataType: 'json',
         success: function(data) {
-            color = data[pickRandomProperty(data)].shade_A700;
-            //callback(color);
+            color = data[pickRandomProperty(data, lesson)].shade_A700;
         }
     });
 
     return color;
 }
 
-function pickRandomProperty(obj) {
+function pickRandomProperty(obj, lesson) {
     var result;
     var count = 0;
+    Math.seedrandom(lesson)
     for (var prop in obj)
         if (Math.random() < 1 / ++count)
             result = prop;
