@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="style/style.css" />
     <link rel="stylesheet" href="style/typography.css" />
     <link rel="stylesheet" href="style/datalist-polyfill.css" />
+    <link rel="stylesheet" href="res/loading-indicator/loading-indicator.css" />
 
     <title>Schema</title>
 
@@ -43,6 +44,9 @@
                 </span>
             </button>
             <h3 class="header-title white">Schema</h3>
+            <svg class="spinner spinner__hidden" id="spinner" width="24px" height="24px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+            </svg>
             <div class="spacer"></div>
             <div id="fav-container" class="item-container">
                 <i class="material-icons white" id="star-button">star</i>
@@ -91,7 +95,7 @@
             <button class="md-button-flat" id="add">LÄGG TILL</button>
         </div>
     </div>
-      <div class="main-content-wrapper desktop">
+    <div class="main-content-wrapper desktop">
         <div class="day day-0">
             <div class="day-header">
                 <h3 class="text-subhead">Måndag</h3>

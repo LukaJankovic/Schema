@@ -59,8 +59,14 @@ loadSchemaFavourites = function() {
 
     $(".select-schema-item").click(function(sender) {
         selected = $(sender.target).attr("id");
+
         loadSchemaFavourites();
         loadSchema();
+
+        $("#favourites-menu").attr("class", "md-menu md-menu__hidden");
+        favOpen = false;
+
+        $("#spinner").attr("class", "spinner spinner__shown");
     })
 }
 

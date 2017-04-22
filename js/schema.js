@@ -68,6 +68,8 @@ loadSchema = function() {
             }
             generateDivForDay(lessons, i);
             currentLessons.push(lessons);
+
+            $("#spinner").attr("class", "spinner spinner__hidden");
         }
     });
 }
