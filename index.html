@@ -32,6 +32,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#2196F3">
 </head>
 
@@ -44,9 +45,9 @@
                 </span>
             </button>
             <h3 class="header-title white">Schema</h3>
-            <svg class="spinner spinner__hidden" id="spinner" width="24px" height="24px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+            <!--<svg class="spinner spinner__hidden" id="spinner" width="24px" height="24px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
                 <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
-            </svg>
+            </svg>-->
             <div class="spacer"></div>
             <div id="fav-container" class="item-container">
                 <i class="material-icons white" id="star-button">star</i>
@@ -96,58 +97,24 @@
         </div>
     </div>
     <div class="main-content-wrapper desktop">
-        <div class="day day-0">
-            <div class="day-header">
-                <h3 class="text-subhead">Måndag</h3>
-            </div>
-        </div>
-        <div class="day day-1">
-            <div class="day-header">
-                <h3 class="text-subhead">Tisdag</h3>
-            </div>
-        </div>
-        <div class="day day-2">
-            <div class="day-header">
-                <h3 class="text-subhead">Onsdag</h3>
-            </div>
-        </div>
-        <div class="day day-3">
-            <div class="day-header">
-                <h3 class="text-subhead">Torsdag</h3>
-            </div>
-        </div>
-        <div class="day day-4">
-            <div class="day-header">
-                <h3 class="text-subhead">Fredag</h3>
-            </div>
-        </div>
+        <img class="desktop-image" />
     </div>
     <div class="main-content-wrapper swiper-container mobile">
         <div class="swiper-wrapper">
             <div class="day day-0 swiper-slide">
-                <div class="day-header">
-                    <h3 class="text-subhead">Måndag</h3>
-                </div>
+                <img class="mobile-image 0" />
             </div>
             <div class="day day-1 swiper-slide">
-                <div class="day-header">
-                    <h3 class="text-subhead">Tisdag</h3>
-                </div>
+                <img class="mobile-image 1" />
             </div>
             <div class="day day-2 swiper-slide">
-                <div class="day-header">
-                    <h3 class="text-subhead">Onsdag</h3>
-                </div>
+                <img class="mobile-image 2" />
             </div>
             <div class="day day-3 swiper-slide">
-                <div class="day-header">
-                    <h3 class="text-subhead">Torsdag</h3>
-                </div>
+                <img class="mobile-image 3" />
             </div>
             <div class="day day-4 swiper-slide">
-                <div class="day-header">
-                    <h3 class="text-subhead">Fredag</h3>
-                </div>
+                <img class="mobile-image 4" />
             </div>
         </div>
     </div>

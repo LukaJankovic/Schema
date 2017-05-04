@@ -1,8 +1,6 @@
 $(function() {
     $("#add").click(function() {
 
-        console.log("add");
-
         $.getJSON('https://lserver.alite.am/apps/schema/res/schools.json', function(data) {
 
             let schoolID = "";
@@ -16,10 +14,11 @@ $(function() {
             }
 
             addClass(schoolID, name, $("#add-klass").val());
-
-            addClass(schoolID, $("#add-klass").val());
-            window.location.href = "https://lserver.alite.am/apps/schema"
+            window.location.href = "https://lserver.alite.am/apps/schema";
         });
     });
 
+    $("#cancel").click(function() {
+        window.location.href = "https://lserver.alite.am/apps/schema";
+    });
 })

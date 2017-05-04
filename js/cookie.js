@@ -4,8 +4,6 @@ addClass = function(school, name, id) {
 
     schema = Cookies.get('schema');
 
-    console.log(schema);
-
     if (typeof(schema) == 'undefined') {
         schema = [];
     } else {
@@ -27,13 +25,13 @@ addClass = function(school, name, id) {
         });
     }
 
-    Cookies.set('schema', schema);
+    Cookies.set('schema', schema, { expires: 365 });
 }
 
 deleteClass = function(id) {
     var nSchema = getSchemaFavourites();
     nSchema.splice(id, 1)
-    Cookies.set('schema', nSchema);
+    Cookies.set('schema', nSchema, { expires: 365 });
 
     if (nSchema.length < getSchemaFavourite()) {
         setSchemaFavourite(0);
@@ -45,7 +43,7 @@ getSchemaFavourites = function() {
 }
 
 setSchemaFavourite = function(id) {
-    Cookies.set('schema-favourite', id);
+    Cookies.set('schema-favourite', id, { expires: 365 });
 }
 
 getSchemaFavourite = function() {
@@ -72,7 +70,7 @@ generateColorForLesson = function(lesson) {
 function pickRandomProperty(obj, lesson) {
     var result;
     var count = 0;
-    Math.seedrandom(lesson)
+    Math.seedrandom(lesson);
     for (var prop in obj)
         if (Math.random() < 1 / ++count)
             result = prop;

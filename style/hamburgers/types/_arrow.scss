@@ -4,12 +4,15 @@
    */
   .hamburger--arrow.is-active {
     .hamburger-inner {
+
+      transform: translate3d($hamburger-layer-width*0.15, 0, 0) rotate(180deg) scale(1, 1);
+
       &::before {
-        transform: translate3d($hamburger-layer-width * -0.2, 0, 0) rotate(-45deg) scale(0.9, 1);
+        transform: translate3d($hamburger-layer-width*0.15, 0, 0) rotate(-135deg) scale(0.8, 1);
       }
 
       &::after {
-        transform: translate3d($hamburger-layer-width * -0.2, 0, 0) rotate(45deg) scale(0.9, 1);
+        transform: translate3d($hamburger-layer-width*0.15, 0, 0) rotate(135deg) scale(0.8, 1);
       }
     }
   }
