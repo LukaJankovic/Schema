@@ -2,6 +2,12 @@ let loadSchemaFavourites;
 let selected = 0;
 
 $(function() {
+
+    if (window.navigator.standalone) {
+        $("meta[name='apple-mobile-web-app-status-bar-style']").remove();
+        $('body').prepend("<div style='height: 20px;width: 100%;background-color: #1976D2;'></div>");
+    }
+
     $.getJSON('https://lserver.alite.am/apps/schema/res/schools.json', function(data) {
 
         $("#skolor").append("<!--[if lte IE 9]><select data-datalist='skolor'><![endif]-->")
@@ -31,7 +37,7 @@ loadSchemaFavourites = function() {
             color = "star";
         }
 
-        let fav = $("<div class='md-menu-item'><p class='select-schema-item' id="+i+">" + getSchemaFavourites()[i].name + " - " + getSchemaFavourites()[i].id + "</p><div class='fav-item-actions'><i class='favourite-schema-item material-icons "+color+"' id="+i+">"+star+"</i><i class='material-icons delete-schema-item' id="+i+">delete</i></div></div>");
+        let fav = $("<div class='md-menu-item'><p class='select-schema-item' id=" + i + ">" + getSchemaFavourites()[i].name + " - " + getSchemaFavourites()[i].id + "</p><div class='fav-item-actions'><i class='favourite-schema-item material-icons " + color + "' id=" + i + ">" + star + "</i><i class='material-icons delete-schema-item' id=" + i + ">delete</i></div></div>");
 
         if (i == selected) {
             fav.attr("class", "md-menu-item__selected");
@@ -48,9 +54,7 @@ loadSchemaFavourites = function() {
     $(".favourite-schema-item").click(function(sender) {
         if (getSchemaFavourite() == $(sender.target).attr("id")) {
             setSchemaFavourite(0);
-        }
-
-        else {
+        } else {
             setSchemaFavourite($(sender.target).attr("id"));
         }
 

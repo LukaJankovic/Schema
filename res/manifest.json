@@ -1,0 +1,33 @@
+{
+  "short_name": "Schema",
+  "name": "Schema-viewer",
+  "icons": [
+    {
+      "src": "https://lserver.alite.am/apps/schema/res/android-icons/mipmap-mdpi/ic_launcher.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "https://lserver.alite.am/apps/schema/res/android-icons/mipmap-hdpi/ic_launcher.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "https://lserver.alite.am/apps/schema/res/android-icons/mipmap-xhdpi/ic_launcher.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "https://lserver.alite.am/apps/schema/res/android-icons/mipmap-xxhdpi/ic_launcher.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "https://lserver.alite.am/apps/schema/res/android-icons/mipmap-xxxhdpi/ic_launcher.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "https://lserver.alite.am/apps/schema",
+  "display": "standalone"
+}
