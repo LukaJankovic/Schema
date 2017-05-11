@@ -3,14 +3,14 @@
 
 <head>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
-
-    <script src="js/datalist.polyfill.min.js"></script>
-    <script src="js/inobounce.min.js"></script>
-    <script src="js/js.cookie.js"></script>
-    <script src="js/md5.min.js"></script>
-    <script src="js/seedrandom.js"></script>
+    <script src="res/api/js/jquery.min.js"></script>
+    <script src="res/api/js/datalist.polyfill.min.js"></script>
+    <script src="res/api/js/inobounce.min.js"></script>
+    <script src="res/api/js/js.cookie.js"></script>
+    <script src="res/api/js/md5.min.js"></script>
+    <script src="res/api/js/seedrandom.js"></script>
+    <script src="res/api/js/pikaday.js"></script>
+    <script src="res/api/js/swiper.jquery.min.js"></script>
 
     <script src="js/index.js"></script>
     <script src="js/cookie.js"></script>
@@ -19,14 +19,14 @@
     <script src="js/dialog.js"></script>
     <script src="js/menu.js"></script>
 
+    <link rel="stylesheet" href="res/api/style/datalist-polyfill.css" />
+    <link rel="stylesheet" href="res/api/style/swiper.min.css">
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
 
     <link rel="stylesheet" href="style/style.css" />
     <link rel="stylesheet" href="style/typography.css" />
-    <link rel="stylesheet" href="style/datalist-polyfill.css" />
-    <link rel="stylesheet" href="res/loading-indicator/loading-indicator.css" />
 
     <title>Schema</title>
 
@@ -37,7 +37,7 @@
     <link rel="manifest" href="res/manifest.json">
 
     <link rel="mask-icon" href="res/school.svg" color="#2196F3">
-    <link rel="shortcut icon" type="image/png" href="res/school.png"/>
+    <link rel="shortcut icon" type="image/png" href="res/school.png" />
     <link rel="icon" type="image/svg+xml" href="res/school.svg">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -53,12 +53,8 @@
 <body>
     <div class="md-header">
         <div class="header-content-container">
-            <button class="hamburger hamburger--arrow" id="md-drawer__trigger" type="button">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button>
-            <h3 class="header-title white">Schema</h3>
+            <i class="material-icons white" id="md-drawer__trigger">menu</i>
+            <h1 class="header-title white">Schema</h1>
             <!--<svg class="spinner spinner__hidden" id="spinner" width="24px" height="24px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
                 <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
             </svg>-->
@@ -71,7 +67,6 @@
             <i class="material-icons white">today</i>
         </div>
     </div>
-    <div id="shade" class="shade-hidden"></div>
     <div id="shade-full" class="shade-hidden"></div>
     <div class="md-drawer md-drawer__hidden" id="drawer">
         <div class="md-row-hover">

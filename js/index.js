@@ -1,6 +1,17 @@
 let loadSchemaFavourites;
 let selected = 0;
 
+$(window).on('popstate', function() {
+
+    console.log(location.pathname);
+
+    if (location.pathname == '/apps/schema/menu') {
+        openMenu();
+    } else {
+        closeMenu();
+    }
+});
+
 $(function() {
 
     if (window.navigator.standalone) {

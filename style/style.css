@@ -105,9 +105,9 @@
   position: fixed;
   height: 100%;
   width: 320px;
-  z-index: 50;
+  z-index: 150;
+  top: 0;
   background-color: white;
-  padding-top: 8px;
   overflow: auto; }
 
 .md-drawer__hidden {
@@ -1017,8 +1017,10 @@ html, body {
   display: flex;
   padding-left: 16px;
   padding-right: 16px;
-  align-items: center; }
-  .header-content-container h3 {
+  align-items: center;
+  height: 100%; }
+  .header-content-container h1 {
+    font-size: 20px;
     margin-left: 16px; }
   .header-content-container i {
     cursor: pointer; }

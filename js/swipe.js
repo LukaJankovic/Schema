@@ -22,6 +22,7 @@ $(document).ready(function() {
     $("#md-drawer__trigger").click(function() {
 
         if ($("#drawer").hasClass("md-drawer__hidden")) {
+            history.pushState(null, document.title, "menu");
             openMenu();
             eventHandled = true;
         } else {
@@ -29,36 +30,33 @@ $(document).ready(function() {
         }
     })
 
-    $("#shade").click(function() {
-      console.log("click");
+    $("#shade-full").click(function() {
         closeMenu();
         eventHandled = false;
     })
 
     openMenu = function() {
         $("#drawer").attr("style", "");
-        $("#shade").attr("style", "");
+        $("#shade-full").attr("style", "");
 
-        $("#md-drawer__trigger").attr("class", "hamburger hamburger--arrow white is-active");
         $("#drawer").attr("class", "md-drawer md-drawer__shown");
-        $("#shade").attr("class", "shade-shown");
+        $("#shade-full").attr("class", "shade-shown");
 
         menuOpen = true;
     }
 
     closeMenu = function() {
         $("#drawer").attr("style", "");
-        $("#shade").attr("style", "");
+        $("#shade-full").attr("style", "");
 
-        $("#shade").attr("class", "shade-hidden");
+        $("#shade-full").attr("class", "shade-hidden");
         $("#drawer").attr("class", "md-drawer md-drawer__hidden");
-        $("#md-drawer__trigger").attr("class", "hamburger hamburger--arrow white");
 
         menuOpen = false;
     }
 
     //Sliding drawer
-    $(".swiper-container, #shade, .md-drawer").on("touchstart", function(e) {
+    $(".swiper-container, #shade-full, .md-drawer").on("touchstart", function(e) {
 
         let x = getX(e);
 
@@ -79,7 +77,7 @@ $(document).ready(function() {
         }
     })
 
-    $(".swiper-container, #shade, .md-drawer").on("touchmove", function(e) {
+    $(".swiper-container, #shade-full, .md-drawer").on("touchmove", function(e) {
 
         let x = getX(e);
         let left;
@@ -93,8 +91,8 @@ $(document).ready(function() {
                 $("#drawer").attr("class", "md-drawer");
                 $("#drawer").attr("style", `left:${left}px`);
 
-                $("#shade").attr("class", "shade-transitioning");
-                $("#shade").attr("style", "background-color: rgba(0, 0, 0, " + ((1 + (left / 320)) * 0.27) + ")");
+                $("#shade-full").attr("class", "shade-transitioning");
+                $("#shade-full").attr("style", "background-color: rgba(0, 0, 0, " + ((1 + (left / 320)) * 0.27) + ")");
             }
         } else {
             left = Math.min(0, x - Math.min(xDown, 320));
@@ -102,12 +100,12 @@ $(document).ready(function() {
             if (dontOpen == false) {
                 $("#drawer").attr("style", `left:${left}px`);
 
-                $("#shade").attr("class", "shade-shown");
-                $("#shade").attr("style", "background-color: rgba(0, 0, 0, " + ((1 + (left / 320)) * 0.27) + ")");
+                $("#shade-full").attr("class", "shade-shown");
+                $("#shade-full").attr("style", "background-color: rgba(0, 0, 0, " + ((1 + (left / 320)) * 0.27) + ")");
             }
         }
     })
-    $(".swiper-container, #shade, .md-drawer").on("touchend", function(e) {
+    $(".swiper-container, #shade-full, .md-drawer").on("touchend", function(e) {
         if (dontOpen == false) {
             let x = getX(e);
 
