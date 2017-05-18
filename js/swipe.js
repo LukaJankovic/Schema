@@ -120,11 +120,13 @@ $(document).ready(function() {
                 } else {
                     closeMenu();
                     menuOpening = true;
+                    history.replaceState(null, null, $(location).attr('href').replace(/menu/, ''));
                 }
             } else {
                 if (xTravel > (160)) {
                     closeMenu();
                     menuOpening = true;
+                    history.replaceState(null, null, $(location).attr('href').replace(/menu/, ''));
                 } else {
                     openMenu();
                     menuOpening = false;

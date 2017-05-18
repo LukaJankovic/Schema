@@ -48,7 +48,7 @@ loadSchemaFavourites = function() {
             color = "star";
         }
 
-        let fav = $("<div class='md-menu-item'><p class='select-schema-item' id=" + i + ">" + getSchemaFavourites()[i].name + " - " + getSchemaFavourites()[i].id + "</p><div class='fav-item-actions'><i class='favourite-schema-item material-icons " + color + "' id=" + i + ">" + star + "</i><i class='material-icons delete-schema-item' id=" + i + ">delete</i></div></div>");
+        let fav = $("<div class='md-menu-item'><p class='select-schema-item' id=" + i + ">" + getSchemaFavourites()[i].name + " - " + getSchemaFavourites()[i].id + "</p><div class='fav-item-actions'><i class='material-icons delete-schema-item' id=" + i + ">delete</i></div></div>");
 
         if (i == selected) {
             fav.attr("class", "md-menu-item__selected");
