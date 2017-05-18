@@ -22,7 +22,7 @@ $(document).ready(function() {
     $("#md-drawer__trigger").click(function() {
 
         if ($("#drawer").hasClass("md-drawer__hidden")) {
-            history.pushState(null, document.title, "menu");
+            history.replaceState(null, document.title, "menu");
             openMenu();
             eventHandled = true;
         } else {
@@ -31,6 +31,7 @@ $(document).ready(function() {
     })
 
     $("#shade-full").click(function() {
+        history.replaceState(null, null, $(location).attr('href').replace(/menu/, ''));
         closeMenu();
         eventHandled = false;
     })
@@ -82,7 +83,7 @@ $(document).ready(function() {
         let x = getX(e);
         let left;
 
-        var drawer = document.getElementById("drawer");
+        var drawer = $("#drawer");
 
         if (menuOpening == true) {
             left = Math.min(0, -320 + x - xDown);
@@ -115,6 +116,7 @@ $(document).ready(function() {
                 if (x > (160)) {
                     openMenu();
                     menuOpening = false;
+                    history.replaceState(null, document.title, "menu");
                 } else {
                     closeMenu();
                     menuOpening = true;
@@ -126,6 +128,7 @@ $(document).ready(function() {
                 } else {
                     openMenu();
                     menuOpening = false;
+                    history.replaceState(null, document.title, "menu");
                 }
             }
             xDown = null;
