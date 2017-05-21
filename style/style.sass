@@ -12,7 +12,6 @@ $material-blue-500: #2196F3
 @import checkbox
 @import menu
 @import schema
-@import hamburgers/hamburgers.scss
 
 html, body
   overflow: hidden
@@ -97,6 +96,7 @@ html, body
 
 .drawer-title
   margin-left: 32px
+  cursor: pointer
 
 .desktop-image, .mobile-image
   width: 100%
@@ -128,6 +128,9 @@ html, body
   h3
     height: 32px
     line-height: inherit !important
+
+#week-container
+  margin-left: 16px
 
 #add-button
   z-index: 3
@@ -195,5 +198,10 @@ html, body
     display: flex
     align-items: center
 
-#fav-container
+#week-menu
+  width: 168px
+  display: flex
+  justify-content: space-between
+
+.item-container
   position: relative

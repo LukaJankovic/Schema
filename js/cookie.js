@@ -41,38 +41,3 @@ deleteClass = function(id) {
 getSchemaFavourites = function() {
     return JSON.parse(Cookies.get('schema'));
 }
-
-setSchemaFavourite = function(id) {
-    Cookies.set('schema-favourite', id, { expires: 365 });
-}
-
-getSchemaFavourite = function() {
-    return Cookies.get('schema-favourite');
-}
-
-generateColorForLesson = function(lesson) {
-
-    var id = md5(lesson);
-    var color = "";
-
-    $.ajax({
-        url: 'https://lserver.alite.am/apps/schema/res/color-palette.json',
-        async: false,
-        dataType: 'json',
-        success: function(data) {
-            color = data[pickRandomProperty(data, lesson)].shade_A700;
-        }
-    });
-
-    return color;
-}
-
-function pickRandomProperty(obj, lesson) {
-    var result;
-    var count = 0;
-    Math.seedrandom(lesson);
-    for (var prop in obj)
-        if (Math.random() < 1 / ++count)
-            result = prop;
-    return result;
-}

@@ -18,6 +18,7 @@
     <script src="js/swipe.js"></script>
     <script src="js/dialog.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/navigation.js"></script>
 
     <link rel="stylesheet" href="res/api/style/datalist-polyfill.css" />
     <link rel="stylesheet" href="res/api/style/swiper.min.css">
@@ -55,27 +56,39 @@
         <div class="header-content-container">
             <i class="material-icons white" id="md-drawer__trigger">menu</i>
             <h1 class="header-title white">Schema</h1>
-            <!--<svg class="spinner spinner__hidden" id="spinner" width="24px" height="24px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-                <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
-            </svg>-->
             <div class="spacer"></div>
             <div id="fav-container" class="item-container">
                 <i class="material-icons white" id="star-button">star</i>
                 <div class="md-menu md-menu__hidden" id="favourites-menu">
                 </div>
             </div>
-            <i class="material-icons white">today</i>
+            <div id="week-container" class="item-container">
+                <i class="material-icons white" id="week-button">today</i>
+                <div class="md-menu md-menu__hidden" id="week-menu">
+                    <div class="md-menu-item">
+                        <p>
+                            Vecka
+                        </p>
+                        <input class="md-textfield__number" id="schema-week" type="number" name="week" min="1" max="52" />
+                    </div>
+                    <div class="md-menu-item" id="this-week">
+                        <p>
+                            Denna vecka
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div id="shade-full" class="shade-hidden"></div>
     <div class="md-drawer md-drawer__hidden" id="drawer">
-        <div class="md-row-hover">
+        <div class="md-row__current" id="menu-schema">
             <div class="title-wrapper">
-                <i class="material-icons dark">today</i>
+                <i class="material-icons current">today</i>
                 <h3 class="drawer-title text-subhead dark">Schema</h3>
             </div>
         </div>
-        <div class="md-row-hover">
+        <div class="md-row-hover" id="menu-skolmat">
             <div class="title-wrapper">
                 <i class="material-icons dark">restaurant</i>
                 <h3 class="drawer-title text-subhead dark">Skolmat</h3>

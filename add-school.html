@@ -25,33 +25,61 @@
 
     <link rel="stylesheet" href="style/style.css" />
     <link rel="stylesheet" href="style/typography.css" />
+
+    <title>Schema</title>
+
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#2196F3">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <link rel="manifest" href="res/manifest.json">
+
+    <link rel="mask-icon" href="res/school.svg" color="#2196F3">
+    <link rel="shortcut icon" type="image/png" href="res/school.png" />
+    <link rel="icon" type="image/svg+xml" href="res/school.svg">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="apple-touch-icon" href="res/ios-icons/AppIcon.appiconset/Icon-App-60x60@2x.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="res/ios-icons/AppIcon.appiconset/Icon-App-60x60@3x.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="res/ios-icons/AppIcon.appiconset/Icon-App-76x76@1x.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="res/ios-icons/AppIcon.appiconset/Icon-App-76x76@2x.png">
+    <link rel="apple-touch-icon" sizes="58x58" href="res/ios-icons/AppIcon.appiconset/Icon-Small-50x50@2x.png">
 </head>
 
-<body class="swiper-container">
+<body>
     <div class="md-header">
         <div class="header-content-container">
-            <button class="hamburger hamburger--arrow" id="md-drawer__trigger" type="button">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button>
-            <h3 class="header-title white">Schema</h3>
-        </div>
-        <div class="add-card">
-            <h2>Lägg till klass</h2>
-            <input id="add-skola" type="text" class="md-textfield" list="skolor" id="school-list" placeholder="Skola" autocomplete="off" />
-            <datalist id="skolor">
-          </datalist>
-            <input id="add-klass" type="text" class="md-textfield" placeholder="Klass" autocomplete="off" />
-            <div class="add-dialog-buttons">
-                <button class="md-button-flat" id="cancel">AVBRYT</button>
-                <button class="md-button-flat" id="add">LÄGG TILL</button>
+            <i class="material-icons white" id="back-button">arrow_back</i>
+            <h1 class="header-title white">Schema</h1>
+            <div class="spacer"></div>
+            <div id="fav-container" class="item-container">
+                <i class="material-icons white" id="star-button">star</i>
+                <div class="md-menu md-menu__hidden" id="favourites-menu">
+                </div>
+            </div>
+            <div id="week-container" class="item-container">
+                <i class="material-icons white" id="week-button">today</i>
+                <div class="md-menu md-menu__hidden" id="week-menu">
+                    <div class="md-menu-item">
+                        <p>
+                            Vecka
+                        </p>
+                        <input class="md-textfield__number" id="schema-week" type="number" name="week" min="1" max="52" />
+                    </div>
+                    <div class="md-menu-item" id="this-week">
+                        <p>
+                            Denna vecka
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div id="shade" class="shade-hidden"></div>
+    <div id="shade-full" class="shade-hidden"></div>
     <div class="md-drawer md-drawer__hidden" id="drawer">
-        <div class="md-row-hover" onclick="location.href = 'https://lserver.alite.am/apps/schema';">
+        <div class="md-row-hover">
             <div class="title-wrapper">
                 <i class="material-icons dark">today</i>
                 <h3 class="drawer-title text-subhead dark">Schema</h3>
@@ -76,7 +104,17 @@
             </div>
         </div>
     </div>
-
+    <div class="add-card">
+        <h2>Lägg till klass</h2>
+        <input id="add-skola" type="text" class="md-textfield" list="skolor" id="school-list" placeholder="Skola" autocomplete="off" />
+        <datalist id="skolor">
+      </datalist>
+        <input id="add-klass" type="text" class="md-textfield" placeholder="Klass" autocomplete="off" />
+        <div class="add-dialog-buttons">
+            <button class="md-button-flat" id="cancel">AVBRYT</button>
+            <button class="md-button-flat" id="add">LÄGG TILL</button>
+        </div>
+    </div>
 </body>
 
 </html>

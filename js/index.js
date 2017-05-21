@@ -30,8 +30,6 @@ $(function() {
         loadPolyfill();
         loadSchemaFavourites();
     });
-
-    selected = getSchemaFavourite();
 });
 
 loadSchemaFavourites = function() {
@@ -39,14 +37,6 @@ loadSchemaFavourites = function() {
     $("#favourites-menu").empty();
 
     for (var i = 0; i < getSchemaFavourites().length; i++) {
-
-        let star = "star_border";
-        let color = "black";
-
-        if (i == getSchemaFavourite()) {
-            star = "star";
-            color = "star";
-        }
 
         let fav = $("<div class='md-menu-item'><p class='select-schema-item' id=" + i + ">" + getSchemaFavourites()[i].name + " - " + getSchemaFavourites()[i].id + "</p><div class='fav-item-actions'><i class='material-icons delete-schema-item' id=" + i + ">delete</i></div></div>");
 

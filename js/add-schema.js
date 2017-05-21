@@ -18,7 +18,7 @@ $(function() {
         });
     });
 
-    $("#cancel").click(function() {
+    $("#cancel, #back-button").click(function() {
         window.location.href = "https://lserver.alite.am/apps/schema";
     });
 })

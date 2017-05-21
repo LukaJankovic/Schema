@@ -22,7 +22,7 @@ $(document).ready(function() {
     $("#md-drawer__trigger").click(function() {
 
         if ($("#drawer").hasClass("md-drawer__hidden")) {
-            history.replaceState(null, document.title, "menu");
+            //history.pushState(null, document.title, "menu");
             openMenu();
             eventHandled = true;
         } else {
@@ -31,12 +31,15 @@ $(document).ready(function() {
     })
 
     $("#shade-full").click(function() {
-        history.replaceState(null, null, $(location).attr('href').replace(/menu/, ''));
+        history.back();
         closeMenu();
         eventHandled = false;
     })
 
     openMenu = function() {
+
+        history.pushState(null, document.title, "menu");
+
         $("#drawer").attr("style", "");
         $("#shade-full").attr("style", "");
 
@@ -57,7 +60,7 @@ $(document).ready(function() {
     }
 
     //Sliding drawer
-    $(".swiper-container, #shade-full, .md-drawer").on("touchstart", function(e) {
+    $(".swiper-container, .md-drawer").on("touchstart", function(e) {
 
         let x = getX(e);
 
@@ -78,7 +81,7 @@ $(document).ready(function() {
         }
     })
 
-    $(".swiper-container, #shade-full, .md-drawer").on("touchmove", function(e) {
+    $(".swiper-container, .md-drawer").on("touchmove", function(e) {
 
         let x = getX(e);
         let left;
@@ -106,7 +109,7 @@ $(document).ready(function() {
             }
         }
     })
-    $(".swiper-container, #shade-full, .md-drawer").on("touchend", function(e) {
+    $(".swiper-container, .md-drawer").on("touchend", function(e) {
         if (dontOpen == false) {
             let x = getX(e);
 
@@ -116,21 +119,21 @@ $(document).ready(function() {
                 if (x > (160)) {
                     openMenu();
                     menuOpening = false;
-                    history.replaceState(null, document.title, "menu");
                 } else {
                     closeMenu();
                     menuOpening = true;
-                    history.replaceState(null, null, $(location).attr('href').replace(/menu/, ''));
+                    if (window.location.href.indexOf("menu") > -1) {
+                        history.back();
+                    }
                 }
             } else {
                 if (xTravel > (160)) {
                     closeMenu();
                     menuOpening = true;
-                    history.replaceState(null, null, $(location).attr('href').replace(/menu/, ''));
+                    history.back();
                 } else {
                     openMenu();
                     menuOpening = false;
-                    history.replaceState(null, document.title, "menu");
                 }
             }
             xDown = null;
