@@ -31,7 +31,11 @@ $(document).ready(function() {
     })
 
     $("#shade-full").click(function() {
-        history.back();
+
+        if (dialogOpen == false) {
+            history.back();
+        }
+
         closeMenu();
         eventHandled = false;
     })

@@ -1,6 +1,19 @@
 var week = 0;
 
 $(function() {
+
+    $.getJSON('https://lserver.alite.am/apps/schema/res/schools.json', function(data) {
+
+        $("#skolor").append("<!--[if lte IE 9]><select data-datalist='skolor'><![endif]-->")
+        for (let i = 0; i < data.length; i++) {
+            $("#skolor").append($("<option></option>").attr("value", data[i].namn + " (" + data[i].stad + ")"));
+        }
+        $("#skolor").append("<!--[if lte IE 9]></select><![endif]-->");
+
+        loadPolyfill();
+        loadSchemaFavourites();
+    });
+
     week = getWeekNumber(new Date());
     $("#schema-week").val(week);
 
@@ -21,7 +34,28 @@ $(function() {
         week = getWeekNumber(new Date());
         $("#schema-week").val(week);
         loadSchema();
-    })
+    });
+
+    $("#add").click(function() {
+
+        $.getJSON('https://lserver.alite.am/apps/schema/res/schools.json', function(data) {
+
+            let schoolID = "";
+            let id = "";
+
+            for (var i = 0; i < data.length; i++) {
+                if ($("#add-skola").val() == (data[i].namn + " (" + data[i].stad + ")")) {
+                    schoolID = data[i].id;
+                    name = data[i].namn;
+                }
+            }
+
+            addClass(schoolID, name, $("#add-klass").val());
+
+            hideDialog();
+            loadSchemaFavourites();
+        });
+    });
 })
 
 $(document).resize(function() {

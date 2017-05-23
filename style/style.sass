@@ -19,6 +19,9 @@ html, body
   margin: 0
   height: 100%
 
+.food-body
+  overflow: visible
+
 .desktop
   @media screen and (max-width: 768px)
     display: none !important
@@ -205,3 +208,23 @@ html, body
 
 .item-container
   position: relative
+
+.week-view
+  height: 100%
+  @media screen and (min-width: 768px)
+    width: 33%
+  @media screen and (max-width: 768px)
+    width: 100%
+  border-right: 1px solid rgba(0, 0, 0, 0.08)
+  padding-left: 16px
+  padding-right: 16px
+
+  div:first-child
+    margin-top: 10px
+
+.day-title
+  font-family: 'Roboto', sans-serif
+  font-weight: 400
+  font-size: 20px
+  border-top: 1px solid rgba(0, 0, 0, 0.08)
+  padding-top: 8px

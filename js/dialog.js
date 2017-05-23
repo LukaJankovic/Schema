@@ -6,8 +6,13 @@ let hideDialog;
 $(function() {
 
     clearAndShow = function() {
+
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            window.location.href = "https://lserver.alite.am/apps/schema/add-school.html"
+            if (window.location.href == "https://lserver.alite.am/apps/schema/skolmat.html") {
+              window.location.href = "https://lserver.alite.am/apps/schema/add-food.html"
+            } else {
+              window.location.href = "https://lserver.alite.am/apps/schema/add-school.html"
+            }
         } else {
             $("#add-skola").val("");
             $("#add-klass").val("");
@@ -39,26 +44,5 @@ $(function() {
 
     $("#cancel").click(function() {
         hideDialog();
-    });
-
-    $("#add").click(function() {
-
-        $.getJSON('https://lserver.alite.am/apps/schema/res/schools.json', function(data) {
-
-            let schoolID = "";
-            let name = "";
-
-            for (var i = 0; i < data.length; i++) {
-                if ($("#add-skola").val() == (data[i].namn + " (" + data[i].stad + ")")) {
-                    schoolID = data[i].id;
-                    name = data[i].namn;
-                }
-            }
-
-            addClass(schoolID, name, $("#add-klass").val());
-
-            hideDialog();
-            loadSchemaFavourites();
-        });
     });
 })
