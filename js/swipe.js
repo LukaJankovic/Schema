@@ -1,4 +1,4 @@
-var menuOpen = false;
+let menuOpen = false;
 var eventHandled = false;
 var menuOpening = false;
 var dontOpen = false;
