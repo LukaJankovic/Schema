@@ -93,7 +93,8 @@
   cursor: pointer;
   border: none;
   font-size: 16px;
-  outline: none; }
+  outline: none;
+  text-transform: uppercase; }
   .md-button-flat:hover {
     background-color: rgba(0, 0, 0, 0.12);
     transition: all 0.2s; }
@@ -436,6 +437,41 @@ form p:last-child {
   flex-direction: column;
   justify-content: center; }
 
+.material-switch {
+  width: 40px;
+  height: 28px;
+  position: relative;
+  cursor: pointer; }
+  .material-switch.enabled .guide {
+    background: #FFECB3; }
+  .material-switch.enabled .toggle {
+    background: #FFCA28;
+    transform: translateX(20px); }
+  .material-switch:active .toggle {
+    background: #f6f6f6;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.36), 0 0 1px rgba(0, 0, 0, 0.12); }
+  .material-switch .guide {
+    position: absolute;
+    width: 34px;
+    height: 14px;
+    top: 5px;
+    left: 2px;
+    background: rgba(34, 31, 31, 0.26);
+    border-radius: 7px;
+    transition: background .15s ease;
+    will-change: background; }
+  .material-switch .toggle {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    top: 2px;
+    left: 0;
+    background: #F1F1F1;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.24), 0 0 1px rgba(0, 0, 0, 0.12);
+    transition: background .15s ease, box-shadow .15s ease, transform .15s ease;
+    will-change: background, box-shadow, transform; }
+
 html, body {
   overflow: hidden;
   padding: 0;
@@ -613,6 +649,16 @@ html, body {
   display: flex;
   justify-content: space-between; }
 
+#lang-item {
+  position: relative; }
+
+#lang-menu {
+  width: 168px;
+  display: flex;
+  justify-content: space-between;
+  right: 0;
+  transform-origin: 75% 50%; }
+
 .item-container {
   position: relative; }
 
@@ -636,5 +682,26 @@ html, body {
   font-size: 20px;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
   padding-top: 8px; }
+
+.settings-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 8px; }
+
+.settings-card {
+  background-color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.16); }
+  @media screen and (min-width: 768px) {
+    .settings-card {
+      width: 50%; } }
+  @media screen and (max-width: 768px) {
+    .settings-card {
+      width: calc(100% - 32px); } }
+
+#clear-button {
+  background-color: transparent; }
+  #clear-button:hover {
+    background-color: rgba(0, 0, 0, 0.12); }
 
 /*# sourceMappingURL=style.css.map */

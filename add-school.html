@@ -3,70 +3,70 @@
 
 <head>
 
-    <script src="res/api/js/jquery.min.js"></script>
-    <script src="res/api/js/datalist.polyfill.min.js"></script>
-    <script src="res/api/js/inobounce.min.js"></script>
-    <script src="res/api/js/js.cookie.js"></script>
-    <script src="res/api/js/md5.min.js"></script>
-    <script src="res/api/js/seedrandom.js"></script>
-    <script src="res/api/js/pikaday.js"></script>
-    <script src="res/api/js/swiper.jquery.min.js"></script>
+  <script src="res/lib/js/jquery.min.js"></script>
+  <script src="res/lib/js/datalist.polyfill.min.js"></script>
+  <script src="res/lib/js/inobounce.min.js"></script>
+  <script src="res/lib/js/js.cookie.js"></script>
+  <script src="res/lib/js/md5.min.js"></script>
+  <script src="res/lib/js/seedrandom.js"></script>
+  <script src="res/lib/js/pikaday.js"></script>
+  <script src="res/lib/js/swiper.jquery.min.js"></script>
 
-    <script src="js/index.js"></script>
-    <script src="js/add-schema.js"></script>
-    <script src="js/cookie.js"></script>
-    <script src="js/swipe.js"></script>
-    <script src="js/schema.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/add-schema.js"></script>
+  <script src="js/cookie.js"></script>
+  <script src="js/swipe.js"></script>
+  <script src="js/schema.js"></script>
 
-    <link rel="stylesheet" href="res/api/style/datalist-polyfill.css" />
-    <link rel="stylesheet" href="res/api/style/swiper.min.css">
+  <link rel="stylesheet" href="res/lib/style/datalist-polyfill.css" />
+  <link rel="stylesheet" href="res/lib/style/swiper.min.css">
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
 
-    <link rel="stylesheet" href="style/style.css" />
-    <link rel="stylesheet" href="style/typography.css" />
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="stylesheet" href="style/typography.css" />
 
-    <title>Schema</title>
+  <title>Schema</title>
 
-    <meta charset="UTF-8">
-    <meta name="theme-color" content="#2196F3">
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="#2196F3">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-    <link rel="manifest" href="res/manifest.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+  <link rel="manifest" href="res/manifest.json">
 
-    <link rel="mask-icon" href="res/school.svg" color="#2196F3">
-    <link rel="shortcut icon" type="image/png" href="res/school.png" />
-    <link rel="icon" type="image/svg+xml" href="res/school.svg">
+  <link rel="mask-icon" href="res/school.svg" color="#2196F3">
+  <link rel="shortcut icon" type="image/png" href="res/school.png" />
+  <link rel="icon" type="image/svg+xml" href="res/school.svg">
 
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-    <link rel="apple-touch-icon" href="res/ios-icons/AppIcon.appiconset/Icon-App-60x60@2x.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="res/ios-icons/AppIcon.appiconset/Icon-App-60x60@3x.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="res/ios-icons/AppIcon.appiconset/Icon-App-76x76@1x.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="res/ios-icons/AppIcon.appiconset/Icon-App-76x76@2x.png">
-    <link rel="apple-touch-icon" sizes="58x58" href="res/ios-icons/AppIcon.appiconset/Icon-Small-50x50@2x.png">
+  <link rel="apple-touch-icon" href="res/ios-icons/AppIcon.appiconset/Icon-App-60x60@2x.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="res/ios-icons/AppIcon.appiconset/Icon-App-60x60@3x.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="res/ios-icons/AppIcon.appiconset/Icon-App-76x76@1x.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="res/ios-icons/AppIcon.appiconset/Icon-App-76x76@2x.png">
+  <link rel="apple-touch-icon" sizes="58x58" href="res/ios-icons/AppIcon.appiconset/Icon-Small-50x50@2x.png">
 </head>
 
 <body>
-    <div class="md-header">
-        <div class="header-content-container">
-            <i class="material-icons white" id="back-button">arrow_back</i>
-            <h1 class="header-title white">Schema</h1>
-        </div>
+  <div class="md-header">
+    <div class="header-content-container">
+      <i class="material-icons white" id="back-button">arrow_back</i>
+      <h1 class="header-title white">Schema</h1>
     </div>
-    <div class="add-card">
-        <h2>Lägg till klass</h2>
-        <input id="add-skola" type="text" class="md-textfield" list="skolor" id="school-list" placeholder="Skola" autocomplete="off" />
-        <datalist id="skolor">
+  </div>
+  <div class="add-card">
+    <h2>Lägg till klass</h2>
+    <input id="add-skola" type="text" class="md-textfield" list="skolor" id="school-list" placeholder="Skola" autocomplete="off" />
+    <datalist id="skolor">
       </datalist>
-        <input id="add-klass" type="text" class="md-textfield" placeholder="Klass" autocomplete="off" />
-        <div class="add-dialog-buttons">
-            <button class="md-button-flat" id="cancel">AVBRYT</button>
-            <button class="md-button-flat" id="add">LÄGG TILL</button>
-        </div>
+    <input id="add-klass" type="text" class="md-textfield" placeholder="Klass" autocomplete="off" />
+    <div class="add-dialog-buttons">
+      <button class="md-button-flat" id="cancel">AVBRYT</button>
+      <button class="md-button-flat" id="add">LÄGG TILL</button>
     </div>
+  </div>
 </body>
 
 </html>

@@ -3,144 +3,154 @@
 
 <head>
 
-    <script src="res/api/js/jquery.min.js"></script>
-    <script src="res/api/js/datalist.polyfill.min.js"></script>
-    <script src="res/api/js/inobounce.min.js"></script>
-    <script src="res/api/js/js.cookie.js"></script>
-    <script src="res/api/js/md5.min.js"></script>
-    <script src="res/api/js/seedrandom.js"></script>
-    <script src="res/api/js/pikaday.js"></script>
-    <script src="res/api/js/swiper.jquery.min.js"></script>
+  <script src="res/lib/js/jquery.min.js"></script>
+  <script src="res/lib/js/datalist.polyfill.min.js"></script>
+  <script src="res/lib/js/inobounce.min.js"></script>
+  <script src="res/lib/js/js.cookie.js"></script>
+  <script src="res/lib/js/md5.min.js"></script>
+  <script src="res/lib/js/seedrandom.js"></script>
+  <script src="res/lib/js/pikaday.js"></script>
+  <script src="res/lib/js/swiper.jquery.min.js"></script>
 
-    <script src="js/index.js"></script>
-    <script src="js/cookie.js"></script>
-    <script src="js/schema.js"></script>
-    <script src="js/swipe.js"></script>
-    <script src="js/dialog.js"></script>
-    <script src="js/menu.js"></script>
-    <script src="js/navigation.js"></script>
+  <script src="res/lib/js/CLDRPluralRuleParser/CLDRPluralRuleParser.js"></script>
+  <script src="res/lib/js/i18n/jquery.i18n.js"></script>
+  <script src="res/lib/js/i18n/jquery.i18n.messagestore.js"></script>
+  <script src="res/lib/js/i18n/jquery.i18n.fallbacks.js"></script>
+  <script src="res/lib/js/i18n/jquery.i18n.language.js"></script>
+  <script src="res/lib/js/i18n/jquery.i18n.parser.js"></script>
+  <script src="res/lib/js/i18n/jquery.i18n.emitter.js"></script>
+  <script src="res/lib/js/i18n/jquery.i18n.emitter.bidi.js"></script>
 
-    <link rel="stylesheet" href="res/api/style/datalist-polyfill.css" />
-    <link rel="stylesheet" href="res/api/style/swiper.min.css">
+  <script src="js/index.js"></script>
+  <script src="js/cookie.js"></script>
+  <script src="js/schema.js"></script>
+  <script src="js/swipe.js"></script>
+  <script src="js/dialog.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/i18n.js"></script>
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+  <link rel="stylesheet" href="res/lib/style/datalist-polyfill.css" />
+  <link rel="stylesheet" href="res/lib/style/swiper.min.css">
 
-    <link rel="stylesheet" href="style/style.css" />
-    <link rel="stylesheet" href="style/typography.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
 
-    <title>Schema</title>
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="stylesheet" href="style/typography.css" />
 
-    <meta charset="UTF-8">
-    <meta name="theme-color" content="#2196F3">
+  <title>Schema</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-    <link rel="manifest" href="res/manifest.json">
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="#2196F3">
 
-    <link rel="mask-icon" href="res/school.svg" color="#2196F3">
-    <link rel="shortcut icon" type="image/png" href="res/school.png" />
-    <link rel="icon" type="image/svg+xml" href="res/school.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+  <link rel="manifest" href="res/manifest.json">
 
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="mask-icon" href="res/school.svg" color="#2196F3">
+  <link rel="shortcut icon" type="image/png" href="res/school.png" />
+  <link rel="icon" type="image/svg+xml" href="res/school.svg">
 
-    <link rel="apple-touch-icon" href="res/ios-icons/AppIcon.appiconset/Icon-App-60x60@2x.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="res/ios-icons/AppIcon.appiconset/Icon-App-60x60@3x.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="res/ios-icons/AppIcon.appiconset/Icon-App-76x76@1x.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="res/ios-icons/AppIcon.appiconset/Icon-App-76x76@2x.png">
-    <link rel="apple-touch-icon" sizes="58x58" href="res/ios-icons/AppIcon.appiconset/Icon-Small-50x50@2x.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="apple-touch-icon" href="res/ios-icons/AppIcon.appiconset/Icon-App-60x60@2x.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="res/ios-icons/AppIcon.appiconset/Icon-App-60x60@3x.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="res/ios-icons/AppIcon.appiconset/Icon-App-76x76@1x.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="res/ios-icons/AppIcon.appiconset/Icon-App-76x76@2x.png">
+  <link rel="apple-touch-icon" sizes="58x58" href="res/ios-icons/AppIcon.appiconset/Icon-Small-50x50@2x.png">
 </head>
 
 <body>
-    <div class="md-header">
-        <div class="header-content-container">
-            <i class="material-icons white" id="md-drawer__trigger">menu</i>
-            <h1 class="header-title white">Schema</h1>
-            <div class="spacer"></div>
-            <div id="fav-container" class="item-container">
-                <i class="material-icons white" id="star-button">star</i>
-                <div class="md-menu md-menu__hidden" id="favourites-menu">
-                </div>
-            </div>
-            <div id="week-container" class="item-container">
-                <i class="material-icons white" id="week-button">today</i>
-                <div class="md-menu md-menu__hidden" id="week-menu">
-                    <div class="md-menu-item">
-                        <p>
-                            Vecka
-                        </p>
-                        <input class="md-textfield__number" id="schema-week" type="number" name="week" min="1" max="52" />
-                    </div>
-                    <div class="md-menu-item" id="this-week">
-                        <p>
-                            Denna vecka
-                        </p>
-                    </div>
-                </div>
-            </div>
+  <div class="md-header">
+    <div class="header-content-container">
+      <i class="material-icons white" id="md-drawer__trigger">menu</i>
+      <h1 class="header-title white" data-i18n="schedule">Schema</h1>
+      <div class="spacer"></div>
+      <div id="fav-container" class="item-container">
+        <i class="material-icons white" id="star-button">star</i>
+        <div class="md-menu md-menu__hidden" id="favourites-menu">
         </div>
+      </div>
+      <div id="week-container" class="item-container">
+        <i class="material-icons white" id="week-button">today</i>
+        <div class="md-menu md-menu__hidden" id="week-menu">
+          <div class="md-menu-item">
+            <p data-i18n="week">
+              Vecka
+            </p>
+            <input class="md-textfield__number" id="schema-week" type="number" name="week" min="1" max="52" />
+          </div>
+          <div class="md-menu-item" id="this-week">
+            <p data-i18n="this-week">
+              Denna vecka
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div id="shade-full" class="shade-hidden"></div>
-    <div class="md-drawer md-drawer__hidden" id="drawer">
-        <div class="md-row__current" id="menu-schema">
-            <div class="title-wrapper">
-                <i class="material-icons current">today</i>
-                <h3 class="drawer-title text-subhead dark">Schema</h3>
-            </div>
-        </div>
-        <div class="md-row-hover" id="menu-skolmat">
-            <div class="title-wrapper">
-                <i class="material-icons dark">restaurant</i>
-                <h3 class="drawer-title text-subhead dark">Skolmat</h3>
-            </div>
-        </div>
-        <div class="md-row-hover">
-            <div class="title-wrapper">
-                <i class="material-icons dark">settings</i>
-                <h3 class="drawer-title text-subhead dark">Inställningar</h3>
-            </div>
-        </div>
-        <div class="md-row-hover">
-            <div class="title-wrapper">
-                <i class="material-icons dark">info</i>
-                <h3 class="drawer-title text-subhead dark">Om</h3>
-            </div>
-        </div>
+  </div>
+  <div id="shade-full" class="shade-hidden"></div>
+  <div class="md-drawer md-drawer__hidden" id="drawer">
+    <div class="md-row__current" id="menu-schema">
+      <div class="title-wrapper">
+        <i class="material-icons current">today</i>
+        <h3 class="drawer-title text-subhead dark" data-i18n="schedule">Schema</h3>
+      </div>
     </div>
-    <div class="md-dialog md-dialog__hide" id="add-dialog">
-        <h2>Lägg till klass</h2>
-        <input id="add-skola" type="text" class="md-textfield" list="skolor" id="school-list" placeholder="Skola" autocomplete="off" />
-        <datalist id="skolor">
+    <div class="md-row-hover" id="menu-skolmat">
+      <div class="title-wrapper">
+        <i class="material-icons dark">restaurant</i>
+        <h3 class="drawer-title text-subhead dark" data-i18n="food">Skolmat</h3>
+      </div>
+    </div>
+    <div class="md-row-hover" id="menu-settings">
+      <div class="title-wrapper">
+        <i class="material-icons dark">settings</i>
+        <h3 class="drawer-title text-subhead dark" data-i18n="settings">Inställningar</h3>
+      </div>
+    </div>
+    <div class="md-row-hover">
+      <div class="title-wrapper">
+        <i class="material-icons dark">info</i>
+        <h3 class="drawer-title text-subhead dark" data-i18n="about">Om</h3>
+      </div>
+    </div>
+  </div>
+  <div class="md-dialog md-dialog__hide" id="add-dialog">
+    <h2 data-i18n="add-class">Lägg till klass</h2>
+    <input id="add-skola" type="text" class="md-textfield" list="skolor" id="school-list" placeholder="Skola" data-i18n="[placeholder]school" autocomplete="off" />
+    <datalist id="skolor">
         </datalist>
-        <input id="add-klass" type="text" class="md-textfield" placeholder="Klass" autocomplete="off" />
-        <div class="add-dialog-buttons">
-            <button class="md-button-flat" id="cancel">AVBRYT</button>
-            <button class="md-button-flat" id="add">LÄGG TILL</button>
-        </div>
+    <input id="add-klass" type="text" class="md-textfield" placeholder="Klass" data-i18n="[placeholder]class" autocomplete="off" />
+    <div class="add-dialog-buttons">
+      <button class="md-button-flat" id="cancel" data-i18n="cancel">AVBRYT</button>
+      <button class="md-button-flat" id="add" data-i18n="add">LÄGG TILL</button>
     </div>
-    <div class="main-content-wrapper desktop">
-        <img class="desktop-image" />
+  </div>
+  <div class="main-content-wrapper desktop">
+    <img class="desktop-image" />
+  </div>
+  <div class="main-content-wrapper swiper-container mobile">
+    <div class="swiper-wrapper">
+      <div class="day day-0 swiper-slide">
+        <img class="mobile-image 0" />
+      </div>
+      <div class="day day-1 swiper-slide">
+        <img class="mobile-image 1" />
+      </div>
+      <div class="day day-2 swiper-slide">
+        <img class="mobile-image 2" />
+      </div>
+      <div class="day day-3 swiper-slide">
+        <img class="mobile-image 3" />
+      </div>
+      <div class="day day-4 swiper-slide">
+        <img class="mobile-image 4" />
+      </div>
     </div>
-    <div class="main-content-wrapper swiper-container mobile">
-        <div class="swiper-wrapper">
-            <div class="day day-0 swiper-slide">
-                <img class="mobile-image 0" />
-            </div>
-            <div class="day day-1 swiper-slide">
-                <img class="mobile-image 1" />
-            </div>
-            <div class="day day-2 swiper-slide">
-                <img class="mobile-image 2" />
-            </div>
-            <div class="day day-3 swiper-slide">
-                <img class="mobile-image 3" />
-            </div>
-            <div class="day day-4 swiper-slide">
-                <img class="mobile-image 4" />
-            </div>
-        </div>
-    </div>
-    <button class="md-button-fab" id="add-button">
+  </div>
+  <button class="md-button-fab" id="add-button">
         <i class="material-icons">add</i>
     </button>
 </body>

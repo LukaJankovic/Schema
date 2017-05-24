@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <script src="res/lib/js/jquery.min.js"></script>
+  <script src="res/lib/js/datalist.polyfill.min.js"></script>
+  <script src="res/lib/js/inobounce.min.js"></script>
+  <script src="res/lib/js/js.cookie.js"></script>
+  <script src="res/lib/js/md5.min.js"></script>
+  <script src="res/lib/js/seedrandom.js"></script>
+  <script src="res/lib/js/pikaday.js"></script>
+  <script src="res/lib/js/swiper.jquery.min.js"></script>
+
+  <script src="js/index.js"></script>
+  <script src="js/cookie.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/swipe.js"></script>
+  <script src="js/dialog.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/switch.js"></script>
+
+  <link rel="stylesheet" href="res/lib/style/datalist-polyfill.css" />
+  <link rel="stylesheet" href="res/lib/style/swiper.min.css">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="stylesheet" href="style/typography.css" />
+
+  <title>Inställningar</title>
+
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="#2196F3">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+  <link rel="manifest" href="res/manifest.json">
+
+  <link rel="mask-icon" href="res/school.svg" color="#2196F3">
+  <link rel="shortcut icon" type="image/png" href="res/school.png" />
+  <link rel="icon" type="image/svg+xml" href="res/school.svg">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="apple-touch-icon" href="res/ios-icons/AppIcon.appiconset/Icon-App-60x60@2x.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="res/ios-icons/AppIcon.appiconset/Icon-App-60x60@3x.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="res/ios-icons/AppIcon.appiconset/Icon-App-76x76@1x.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="res/ios-icons/AppIcon.appiconset/Icon-App-76x76@2x.png">
+  <link rel="apple-touch-icon" sizes="58x58" href="res/ios-icons/AppIcon.appiconset/Icon-Small-50x50@2x.png">
+</head>
+
+<body>
+  <div class="md-header">
+    <div class="header-content-container">
+      <i class="material-icons white" id="md-drawer__trigger">menu</i>
+      <h1 class="header-title white">Inställningar</h1>
+      <div class="spacer"></div>
+    </div>
+  </div>
+  <div id="shade-full" class="shade-hidden"></div>
+  <div class="md-drawer md-drawer__hidden" id="drawer">
+    <div class="md-row__current" id="menu-schema">
+      <div class="title-wrapper">
+        <i class="material-icons current">today</i>
+        <h3 class="drawer-title text-subhead dark">Schema</h3>
+      </div>
+    </div>
+    <div class="md-row-hover" id="menu-skolmat">
+      <div class="title-wrapper">
+        <i class="material-icons dark">restaurant</i>
+        <h3 class="drawer-title text-subhead dark">Skolmat</h3>
+      </div>
+    </div>
+    <div class="md-row-hover" id="menu-settings">
+      <div class="title-wrapper">
+        <i class="material-icons dark">settings</i>
+        <h3 class="drawer-title text-subhead dark">Inställningar</h3>
+      </div>
+    </div>
+    <div class="md-row-hover">
+      <div class="title-wrapper">
+        <i class="material-icons dark">info</i>
+        <h3 class="drawer-title text-subhead dark">Om</h3>
+      </div>
+    </div>
+  </div>
+  <div class="settings-wrapper">
+    <div class="settings-card">
+      <div class='md-menu-item'>
+        <p>Tillåt Cookies?</p>
+        <div class="material-switch enabled">
+          <div class="guide"></div>
+          <div class="toggle"></div>
+        </div>
+      </div>
+      <div class='md-menu-item'>
+        <p>Rensa Data</p>
+        <button class="md-button-flat" id="clear-button">Rensa</button>
+      </div>
+      <div class='md-menu-item' id="lang-item">
+        <p>Språk</p>
+        <button class="md-button-flat" id="lang-button">Svenska</button>
+        <div class="md-menu md-menu__hidden" id="lang-menu">
+          <div class="md-menu-item">
+            <p>
+              Svenska
+            </p>
+          </div>
+          <div class="md-menu-item" id="this-week">
+            <p>
+              English
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

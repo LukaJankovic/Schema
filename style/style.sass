@@ -12,6 +12,7 @@ $material-blue-500: #2196F3
 @import checkbox
 @import menu
 @import schema
+@import switch
 
 html, body
   overflow: hidden
@@ -206,6 +207,16 @@ html, body
   display: flex
   justify-content: space-between
 
+#lang-item
+  position: relative
+
+#lang-menu
+  width: 168px
+  display: flex
+  justify-content: space-between
+  right: 0
+  transform-origin: 75% 50%
+
 .item-container
   position: relative
 
@@ -228,3 +239,22 @@ html, body
   font-size: 20px
   border-top: 1px solid rgba(0, 0, 0, 0.08)
   padding-top: 8px
+
+.settings-wrapper
+  width: 100%
+  display: flex
+  justify-content: center
+  padding-top: 8px
+
+.settings-card
+  @media screen and (min-width: 768px)
+    width: 50%
+  @media screen and (max-width: 768px)
+    width: calc(100% - 32px)
+  background-color: white
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.16)
+
+#clear-button
+  background-color: rgba(0, 0, 0, 0)
+  &:hover
+    background-color: rgba(0, 0, 0, 0.12)
