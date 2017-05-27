@@ -1,4 +1,4 @@
-let menuOpen = false;
+var menuOpen = false;
 var eventHandled = false;
 var menuOpening = false;
 var dontOpen = false;
@@ -6,8 +6,8 @@ var xDown;
 var xUp;
 var swiper;
 
-let openMenu;
-let closeMenu;
+var openMenu;
+var closeMenu;
 
 $(document).ready(function() {
 
@@ -66,7 +66,7 @@ $(document).ready(function() {
   //Sliding drawer
   $(".swiper-container, .md-drawer").on("touchstart", function(e) {
 
-    let x = getX(e);
+    var x = getX(e);
 
     xDown = x;
 
@@ -87,8 +87,8 @@ $(document).ready(function() {
 
   $(".swiper-container, .md-drawer").on("touchmove", function(e) {
 
-    let x = getX(e);
-    let left;
+    var x = getX(e);
+    var left;
 
     var drawer = $("#drawer");
 
@@ -115,9 +115,9 @@ $(document).ready(function() {
   })
   $(".swiper-container, .md-drawer").on("touchend", function(e) {
     if (dontOpen == false) {
-      let x = getX(e);
+      var x = getX(e);
 
-      let xTravel = xDown - x;
+      var xTravel = xDown - x;
 
       if (menuOpening == true) {
         if (x > (160)) {

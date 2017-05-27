@@ -7,10 +7,16 @@
   <script src="res/lib/js/datalist.polyfill.min.js"></script>
   <script src="res/lib/js/inobounce.min.js"></script>
   <script src="res/lib/js/js.cookie.js"></script>
-  <script src="res/lib/js/md5.min.js"></script>
-  <script src="res/lib/js/seedrandom.js"></script>
-  <script src="res/lib/js/pikaday.js"></script>
   <script src="res/lib/js/swiper.jquery.min.js"></script>
+
+  <script src="res/lib/js/CLDRPluralRuleParser/CLDRPluralRuleParser.js"></script>
+  <script src="res/lib/js/i18n/jquery.i18n.js"></script>
+  <script src="res/lib/js/i18n/jquery.i18n.messagestore.js"></script>
+  <script src="res/lib/js/i18n/jquery.i18n.fallbacks.js"></script>
+  <script src="res/lib/js/i18n/jquery.i18n.language.js"></script>
+  <script src="res/lib/js/i18n/jquery.i18n.parser.js"></script>
+  <script src="res/lib/js/i18n/jquery.i18n.emitter.js"></script>
+  <script src="res/lib/js/i18n/jquery.i18n.emitter.bidi.js"></script>
 
   <script src="js/index.js"></script>
   <script src="js/cookie.js"></script>
@@ -19,6 +25,7 @@
   <script src="js/dialog.js"></script>
   <script src="js/menu.js"></script>
   <script src="js/navigation.js"></script>
+  <script src="js/i18n.js"></script>
 
   <link rel="stylesheet" href="res/lib/style/datalist-polyfill.css" />
   <link rel="stylesheet" href="res/lib/style/swiper.min.css">
@@ -29,7 +36,7 @@
   <link rel="stylesheet" href="style/style.css" />
   <link rel="stylesheet" href="style/typography.css" />
 
-  <title>Skolmat</title>
+  <title data-i18n="food">Skolmat</title>
 
   <meta charset="UTF-8">
   <meta name="theme-color" content="#2196F3">
@@ -55,7 +62,7 @@
   <div class="md-header">
     <div class="header-content-container">
       <i class="material-icons white" id="md-drawer__trigger">menu</i>
-      <h1 class="header-title white">Skolmat</h1>
+      <h1 class="header-title white" data-i18n="food">Skolmat</h1>
       <div class="spacer"></div>
       <div id="fav-container" class="item-container">
         <i class="material-icons white" id="star-button">star</i>
@@ -66,13 +73,13 @@
         <i class="material-icons white" id="week-button">today</i>
         <div class="md-menu md-menu__hidden" id="week-menu">
           <div class="md-menu-item">
-            <p>
+            <p data-i18n="week">
               Vecka
             </p>
             <input class="md-textfield__number" id="schema-week" type="number" name="week" min="1" max="52" />
           </div>
           <div class="md-menu-item" id="this-week">
-            <p>
+            <p data-i18n="this-week">
               Denna vecka
             </p>
           </div>
@@ -85,36 +92,36 @@
     <div class="md-row-hover" id="menu-schema">
       <div class="title-wrapper">
         <i class="material-icons">today</i>
-        <h3 class="drawer-title text-subhead dark">Schema</h3>
+        <h3 class="drawer-title text-subhead dark" data-i18n="schedule">Schema</h3>
       </div>
     </div>
     <div class="md-row__current" id="menu-skolmat">
       <div class="title-wrapper">
         <i class="material-icons current">restaurant</i>
-        <h3 class="drawer-title text-subhead dark">Skolmat</h3>
+        <h3 class="drawer-title text-subhead dark" data-i18n="food">Skolmat</h3>
       </div>
     </div>
     <div class="md-row-hover" id="menu-settings">
       <div class="title-wrapper">
         <i class="material-icons dark">settings</i>
-        <h3 class="drawer-title text-subhead dark">Inställningar</h3>
+        <h3 class="drawer-title text-subhead dark" data-i18n="settings">Inställningar</h3>
       </div>
     </div>
     <div class="md-row-hover">
       <div class="title-wrapper">
         <i class="material-icons dark">info</i>
-        <h3 class="drawer-title text-subhead dark">Om</h3>
+        <h3 class="drawer-title text-subhead dark" data-i18n="about">Om</h3>
       </div>
     </div>
   </div>
   <div class="md-dialog md-dialog__hide" id="add-dialog">
-    <h2>Lägg till skola</h2>
-    <input id="add-skola" type="text" class="md-textfield" list="skolor" id="school-list" placeholder="Skola" autocomplete="off" />
+    <h2 data-i18n="add-school">Lägg till skola</h2>
+    <input id="add-skola" type="text" class="md-textfield" list="skolor" id="school-list" placeholder="Skola" data-i18n="[placeholder]school" autocomplete="off" />
     <datalist id="skolor">
         </datalist>
     <div class="add-dialog-buttons">
-      <button class="md-button-flat" id="cancel">AVBRYT</button>
-      <button class="md-button-flat" id="add">LÄGG TILL</button>
+      <button class="md-button-flat" id="cancel" data-i18n="cancel">AVBRYT</button>
+      <button class="md-button-flat" id="add" data-i18n="add">LÄGG TILL</button>
     </div>
   </div>
   <div class="main-content-wrapper desktop">
@@ -122,7 +129,7 @@
       <div class="1-header day-title">
       </div>
       <div class="1">
-        <p class="day-title">
+        <p class="day-title" data-i18n="mon">
           Måndag
         </p>
         <p class="day-food 1-0">
@@ -130,7 +137,7 @@
         </p>
       </div>
       <div class="2">
-        <p class="day-title">
+        <p class="day-title" data-i18n="tis">
           Tisdag
         </p>
         <p class="day-food 1-1">
@@ -138,7 +145,7 @@
         </p>
       </div>
       <div class="3">
-        <p class="day-title">
+        <p class="day-title" data-i18n"ons">
           Onsdag
         </p>
         <p class="day-food 1-2">
@@ -146,7 +153,7 @@
         </p>
       </div>
       <div class="4">
-        <p class="day-title">
+        <p class="day-title" data-i18n="tor">
           Torsdag
         </p>
         <p class="day-food 1-3">
@@ -154,7 +161,7 @@
         </p>
       </div>
       <div class="5">
-        <p class="day-title">
+        <p class="day-title" data-i18n="fre">
           Fredag
         </p>
         <p class="day-food 1-4">
@@ -166,7 +173,7 @@
       <div class="2-header day-title">
       </div>
       <div class="1">
-        <p class="day-title">
+        <p class="day-title" data-i18n="mon">
           Måndag
         </p>
         <p class="day-food 2-1-0">
@@ -174,7 +181,7 @@
         </p>
       </div>
       <div class="2">
-        <p class="day-title">
+        <p class="day-title" data-i18n="tis">
           Tisdag
         </p>
         <p class="day-food 2-1-1">
@@ -182,7 +189,7 @@
         </p>
       </div>
       <div class="3">
-        <p class="day-title">
+        <p class="day-title" data-i18n="ons">
           Onsdag
         </p>
         <p class="day-food 2-1-2">
@@ -190,7 +197,7 @@
         </p>
       </div>
       <div class="4">
-        <p class="day-title">
+        <p class="day-title" data-i18n="tor">
           Torsdag
         </p>
         <p class="day-food 2-1-3">
@@ -198,7 +205,7 @@
         </p>
       </div>
       <div class="5">
-        <p class="day-title">
+        <p class="day-title" data-i18n="fre">
           Fredag
         </p>
         <p class="day-food 2-1-4">
@@ -210,7 +217,7 @@
       <div class="3-header day-title">
       </div>
       <div class="1">
-        <p class="day-title">
+        <p class="day-title" data-i18n="mon">
           Måndag
         </p>
         <p class="day-food 3-1-0">
@@ -218,7 +225,7 @@
         </p>
       </div>
       <div class="2">
-        <p class="day-title">
+        <p class="day-title" data-i18n="tis">
           Tisdag
         </p>
         <p class="day-food 3-1-1">
@@ -226,7 +233,7 @@
         </p>
       </div>
       <div class="3">
-        <p class="day-title">
+        <p class="day-title" data-i18n="ons">
           Onsdag
         </p>
         <p class="day-food 3-1-2">
@@ -234,7 +241,7 @@
         </p>
       </div>
       <div class="4">
-        <p class="day-title">
+        <p class="day-title" data-i18n="tor">
           Torsdag
         </p>
         <p class="day-food 3-1-3">
@@ -242,7 +249,7 @@
         </p>
       </div>
       <div class="5">
-        <p class="day-title">
+        <p class="day-title" data-i18n="fre">
           Fredag
         </p>
         <p class="day-food 3-1-4">
@@ -256,7 +263,7 @@
       <div class="1-header day-title">
       </div>
       <div class="1">
-        <p class="day-title">
+        <p class="day-title" data-i18n="mon">
           Måndag
         </p>
         <p class="day-food 1-0">
@@ -264,7 +271,7 @@
         </p>
       </div>
       <div class="2">
-        <p class="day-title">
+        <p class="day-title" data-i18n="tis">
           Tisdag
         </p>
         <p class="day-food 1-1">
@@ -272,7 +279,7 @@
         </p>
       </div>
       <div class="3">
-        <p class="day-title">
+        <p class="day-title" data-i18n="ons">
           Onsdag
         </p>
         <p class="day-food 1-2">
@@ -280,7 +287,7 @@
         </p>
       </div>
       <div class="4">
-        <p class="day-title">
+        <p class="day-title" data-i18n="tor">
           Torsdag
         </p>
         <p class="day-food 1-3">
@@ -288,7 +295,7 @@
         </p>
       </div>
       <div class="5">
-        <p class="day-title">
+        <p class="day-title" data-i18n="fre">
           Fredag
         </p>
         <p class="day-food 1-4">

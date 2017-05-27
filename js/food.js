@@ -31,7 +31,7 @@ $(function() {
   $.getJSON('https://lserver.alite.am/apps/schema/res/skolmat.json', function(data) {
 
     $("#skolor").append("<!--[if lte IE 9]><select data-datalist='skolor'><![endif]-->")
-    for (let i = 0; i < data.length; i++) {
+    for (var i = 0; i < data.length; i++) {
       $("#skolor").append($("<option></option>").attr("value", data[i].name + " (" + data[i].city + ")"));
     }
     $("#skolor").append("<!--[if lte IE 9]></select><![endif]-->");
@@ -46,7 +46,7 @@ $(function() {
 
     for (var i = 0; i < getFoodFavourites().length; i++) {
 
-      let fav = $("<div class='md-menu-item'><p class='select-schema-item' id=" + i + ">" + getFoodFavourites()[i].school + "</p><div class='fav-item-actions'><i class='material-icons delete-schema-item' id=" + i + ">delete</i></div></div>");
+      var fav = $("<div class='md-menu-item'><p class='select-schema-item' id=" + i + ">" + getFoodFavourites()[i].school + "</p><div class='fav-item-actions'><i class='material-icons delete-schema-item' id=" + i + ">delete</i></div></div>");
 
       if (i == selected) {
         fav.attr("class", "md-menu-item__selected");
@@ -76,8 +76,8 @@ $(function() {
 
     $.getJSON('https://lserver.alite.am/apps/schema/res/skolmat.json', function(data) {
 
-      let schoolID = "";
-      let id = "";
+      var schoolID = "";
+      var id = "";
 
       for (var i = 0; i < data.length; i++) {
         if ($("#add-skola").val() == (data[i].name + " (" + data[i].city + ")")) {

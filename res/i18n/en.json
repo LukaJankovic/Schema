@@ -1,14 +1,26 @@
 {
-   "language-data":"English",
-   "schedule":"Schedule",
-   "week":"Week",
-   "this-week":"This Week",
-   "food":"School Food",
-   "settings":"Settings",
-   "about":"About",
-   "add-class":"Add Class",
-   "cancel":"Cancel",
-   "add":"Add",
-   "school":"School",
-   "class":"Class"
+  "language-data": "English",
+  "schedule": "Schedule",
+  "week": "Week",
+  "this-week": "This Week",
+  "food": "School Food",
+  "settings": "Settings",
+  "about": "About",
+  "add-class": "Add Class",
+  "cancel": "Cancel",
+  "add": "Add",
+  "school": "School",
+  "class": "Class",
+
+  "add-school": "Add School",
+  "mon": "Monday",
+  "tis": "Tuesday",
+  "ons": "Wednesday",
+  "tor": "Thursday",
+  "fre": "Friday",
+
+  "language": "Language",
+  "clear-data": "Clear Data",
+  "clear": "Clear",
+  "data-cleared": "Data cleared."
 }

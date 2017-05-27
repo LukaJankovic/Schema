@@ -1,7 +1,7 @@
 var dialogOpen = false;
 
-let showDialog;
-let hideDialog;
+var showDialog;
+var hideDialog;
 
 $(function() {
 

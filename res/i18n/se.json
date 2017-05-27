@@ -1,14 +1,26 @@
 {
-   "language-data":"Svenska",
-   "schedule":"Schema",
-   "week":"Vecka",
-   "this-week":"Denna Vecka",
-   "food":"Skolmat",
-   "settings":"Inställningar",
-   "about":"Om",
-   "add-class":"Lägg till klass",
-   "cancel":"Avbryt",
-   "add":"Lägg till",
-   "school":"Skola",
-   "class":"Klass"
+  "language-data": "Svenska",
+  "schedule": "Schema",
+  "week": "Vecka",
+  "this-week": "Denna Vecka",
+  "food": "Skolmat",
+  "settings": "Inställningar",
+  "about": "Om",
+  "add-class": "Lägg till klass",
+  "cancel": "Avbryt",
+  "add": "Lägg till",
+  "school": "Skola",
+  "class": "Klass",
+
+  "add-school": "Lägg till skola",
+  "mon": "Måndag",
+  "tis": "Tisdag",
+  "ons": "Onsdag",
+  "tor": "Torsdag",
+  "fre": "Fredag",
+
+  "language": "Språk",
+  "clear-data": "Rensa Data",
+  "clear": "Rensa",
+  "data-cleared": "Data rensad."
 }

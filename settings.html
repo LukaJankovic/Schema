@@ -7,9 +7,6 @@
   <script src="res/lib/js/datalist.polyfill.min.js"></script>
   <script src="res/lib/js/inobounce.min.js"></script>
   <script src="res/lib/js/js.cookie.js"></script>
-  <script src="res/lib/js/md5.min.js"></script>
-  <script src="res/lib/js/seedrandom.js"></script>
-  <script src="res/lib/js/pikaday.js"></script>
   <script src="res/lib/js/swiper.jquery.min.js"></script>
 
   <script src="res/lib/js/CLDRPluralRuleParser/CLDRPluralRuleParser.js"></script>
@@ -28,7 +25,7 @@
   <script src="js/dialog.js"></script>
   <script src="js/menu.js"></script>
   <script src="js/navigation.js"></script>
-  <script src="js/switch.js"></script>
+  <script src="js/i18n.js"></script>
 
   <link rel="stylesheet" href="res/lib/style/datalist-polyfill.css" />
   <link rel="stylesheet" href="res/lib/style/swiper.min.css">
@@ -39,7 +36,7 @@
   <link rel="stylesheet" href="style/style.css" />
   <link rel="stylesheet" href="style/typography.css" />
 
-  <title>Inställningar</title>
+  <title data-i18n="settings">Inställningar</title>
 
   <meta charset="UTF-8">
   <meta name="theme-color" content="#2196F3">
@@ -65,7 +62,7 @@
   <div class="md-header">
     <div class="header-content-container">
       <i class="material-icons white" id="md-drawer__trigger">menu</i>
-      <h1 class="header-title white">Inställningar</h1>
+      <h1 class="header-title white" data-i18n="settings">Inställningar</h1>
       <div class="spacer"></div>
     </div>
   </div>
@@ -74,32 +71,32 @@
     <div class="md-row-hover" id="menu-schema">
       <div class="title-wrapper">
         <i class="material-icons dark">today</i>
-        <h3 class="drawer-title text-subhead dark">Schema</h3>
+        <h3 class="drawer-title text-subhead dark" data-i18n="schedule">Schema</h3>
       </div>
     </div>
     <div class="md-row-hover" id="menu-skolmat">
       <div class="title-wrapper">
         <i class="material-icons dark">restaurant</i>
-        <h3 class="drawer-title text-subhead dark">Skolmat</h3>
+        <h3 class="drawer-title text-subhead dark" data-i18n="food">Skolmat</h3>
       </div>
     </div>
     <div class="md-row__current" id="menu-settings">
       <div class="title-wrapper">
         <i class="material-icons current">settings</i>
-        <h3 class="drawer-title text-subhead dark">Inställningar</h3>
+        <h3 class="drawer-title text-subhead dark" data-i18n="settings">Inställningar</h3>
       </div>
     </div>
     <div class="md-row-hover">
       <div class="title-wrapper">
         <i class="material-icons dark">info</i>
-        <h3 class="drawer-title text-subhead dark">Om</h3>
+        <h3 class="drawer-title text-subhead dark" data-i18n="about">Om</h3>
       </div>
     </div>
   </div>
   <div class="settings-wrapper">
     <div class="settings-card">
       <div class='md-menu-item' id="lang-item">
-        <p>Språk</p>
+        <p data-i18n="language">Språk</p>
         <button class="md-button-flat" id="lang-button" data-i18n="language-data">Svenska</button>
         <div class="md-menu md-menu__hidden" id="lang-menu">
           <div class="md-menu-item" id="lang-swedish">
@@ -115,12 +112,12 @@
         </div>
       </div>
       <div class='md-menu-item'>
-        <p>Rensa Data</p>
-        <button class="md-button-flat red" id="clear-button">Rensa</button>
+        <p data-i18n="clear-data">Rensa Data</p>
+        <button class="md-button-flat red" id="clear-button" data-i18n="clear">Rensa</button>
       </div>
     </div>
   </div>
-  <div class="md-snackbar md-snackbar__hidden" id="snackbar">
+  <div class="md-snackbar md-snackbar__hidden" id="snackbar" data-i18n="data-cleared">
     Data rensad.
   </div>
 </body>
