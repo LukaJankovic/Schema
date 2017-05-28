@@ -66,54 +66,53 @@
       <div class="spacer"></div>
       <div id="fav-container" class="item-container">
         <i class="material-icons white" id="star-button">star</i>
-        <div class="md-menu md-menu__hidden" id="favourites-menu">
-        </div>
+        <ul class="md-menu md-menu__hidden" id="favourites-menu"></ul>
       </div>
       <div id="week-container" class="item-container">
         <i class="material-icons white" id="week-button">today</i>
-        <div class="md-menu md-menu__hidden" id="week-menu">
-          <div class="md-menu-item">
+        <ul class="md-menu md-menu__hidden" id="week-menu">
+          <li class="md-menu-item">
             <p data-i18n="week">
               Vecka
             </p>
             <input class="md-textfield__number" id="schema-week" type="number" name="week" min="1" max="52" />
-          </div>
-          <div class="md-menu-item" id="this-week">
+          </li>
+          <li class="md-menu-item" id="this-week">
             <p data-i18n="this-week">
               Denna vecka
             </p>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
   <div id="shade-full" class="shade-hidden"></div>
-  <div class="md-drawer md-drawer__hidden" id="drawer">
-    <div class="md-row__current" id="menu-schema">
+  <ul class="md-drawer md-drawer__hidden" id="drawer">
+    <li class="md-row__current" id="menu-schema">
       <div class="title-wrapper">
         <i class="material-icons current">today</i>
         <h3 class="drawer-title text-subhead dark" data-i18n="schedule">Schema</h3>
       </div>
-    </div>
-    <div class="md-row-hover" id="menu-skolmat">
+    </li>
+    <li class="md-row-hover" id="menu-skolmat">
       <div class="title-wrapper">
         <i class="material-icons dark">restaurant</i>
         <h3 class="drawer-title text-subhead dark" data-i18n="food">Skolmat</h3>
       </div>
-    </div>
-    <div class="md-row-hover" id="menu-settings">
+    </li>
+    <li class="md-row-hover" id="menu-settings">
       <div class="title-wrapper">
         <i class="material-icons dark">settings</i>
         <h3 class="drawer-title text-subhead dark" data-i18n="settings">Inställningar</h3>
       </div>
-    </div>
-    <div class="md-row-hover">
+    </li>
+    <li class="md-row-hover" id="menu-about">
       <div class="title-wrapper">
         <i class="material-icons dark">info</i>
         <h3 class="drawer-title text-subhead dark" data-i18n="about">Om</h3>
       </div>
-    </div>
-  </div>
+    </li>
+  </ul>
   <div class="md-dialog md-dialog__hide" id="add-dialog">
     <h2 data-i18n="add-class">Lägg till klass</h2>
     <input id="add-skola" type="text" class="md-textfield" list="skolor" id="school-list" placeholder="Skola" data-i18n="[placeholder]school" autocomplete="off" />

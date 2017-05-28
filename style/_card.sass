@@ -1,0 +1,17 @@
+.md-card-wrapper
+  width: 100%
+  display: flex
+  justify-content: center
+  padding-top: 8px
+
+.md-card
+  @media screen and (min-width: 768px)
+    width: 50%
+  @media screen and (max-width: 768px)
+    width: calc(100% - 32px)
+  background-color: white
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.16)
+  border-radius: 2px
+  p
+    padding-left: 16px
+    padding-right: 16px

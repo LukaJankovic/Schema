@@ -20,7 +20,6 @@
 
   <script src="js/index.js"></script>
   <script src="js/cookie.js"></script>
-  <script src="js/settings.js"></script>
   <script src="js/swipe.js"></script>
   <script src="js/dialog.js"></script>
   <script src="js/menu.js"></script>
@@ -36,7 +35,7 @@
   <link rel="stylesheet" href="style/style.css" />
   <link rel="stylesheet" href="style/typography.css" />
 
-  <title data-i18n="settings">Inställningar</title>
+  <title data-i18n="about">Om</title>
 
   <meta charset="UTF-8">
   <meta name="theme-color" content="#2196F3">
@@ -62,7 +61,7 @@
   <div class="md-header">
     <div class="header-content-container">
       <i class="material-icons white" id="md-drawer__trigger">menu</i>
-      <h1 class="header-title white" data-i18n="settings">Inställningar</h1>
+      <h1 class="header-title white" data-i18n="about">Om</h1>
       <div class="spacer"></div>
     </div>
   </div>
@@ -80,48 +79,51 @@
         <h3 class="drawer-title text-subhead dark" data-i18n="food">Skolmat</h3>
       </div>
     </li>
-    <li class="md-row__current" id="menu-settings">
+    <li class="md-row-hover" id="menu-settings">
       <div class="title-wrapper">
-        <i class="material-icons current">settings</i>
+        <i class="material-icons dark">settings</i>
         <h3 class="drawer-title text-subhead dark" data-i18n="settings">Inställningar</h3>
       </div>
     </li>
-    <li class="md-row-hover" id="menu-about">
-      <lidiv class="title-wrapper">
-        <i class="material-icons dark">info</i>
+    <li class="md-row__current" id="menu-about">
+      <div class="title-wrapper">
+        <i class="material-icons current">info</i>
         <h3 class="drawer-title text-subhead dark" data-i18n="about">Om</h3>
-        </div>
+      </div>
     </li>
   </ul>
   <div class="md-card-wrapper">
     <div class="md-card">
+      <p data-i18n="about-text">
+        Gjord av Luka Janković 2017. Data hämtades ifrån Novasoftware och Skolmaten. APIer som använts:
+      </p>
       <ul class="list">
-        <li class='md-menu-item' id="lang-item">
-          <p data-i18n="language">Språk</p>
-          <button class="md-button-flat" id="lang-button" data-i18n="language-data">Svenska</button>
-          <ul class="md-menu md-menu__hidden" id="lang-menu">
-            <li class="md-menu-item" id="lang-swedish">
-              <p>
-                Svenska
-              </p>
-            </li>
-            <li class="md-menu-item" id="lang-english">
-              <p>
-                English
-              </p>
-            </li>
-          </ul>
+        <li class='md-menu-item'>
+          <p>jquery</p>
+          <a href="http://jquery.com"><i class="material-icons">open_in_new</i></a>
         </li>
         <li class='md-menu-item'>
-          <p data-i18n="clear-data">Rensa Data</p>
-          <button class="md-button-flat red" id="clear-button" data-i18n="clear">Rensa</button>
+          <p>jquery-i18n</p>
+          <a href="https://github.com/recurser/jquery-i18n"><i class="material-icons">open_in_new</i></a>
+        </li>
+        <li class='md-menu-item'>
+          <p>js-cookie</p>
+          <a href="https://github.com/js-cookie/js-cookie"><i class="material-icons">open_in_new</i></a>
+        </li>
+        <li class='md-menu-item'>
+          <p>purejs-datalist-polyfill</p>
+          <a href="https://github.com/Fyrd/purejs-datalist-polyfill"><i class="material-icons">open_in_new</i></a>
+        </li>
+        <li class='md-menu-item'>
+          <p>iNoBounce</p>
+          <a href="https://github.com/lazd/iNoBounce"><i class="material-icons">open_in_new</i></a>
+        </li>
+        <li class='md-menu-item'>
+          <p>Swiper</p>
+          <a href="http://idangero.us/swiper/"><i class="material-icons">open_in_new</i></a>
         </li>
       </ul>
     </div>
-  </div>
-  <div class="md-snackbar md-snackbar__hidden" id="snackbar" data-i18n="data-cleared">
-    Data rensad.
-  </div>
 </body>
 
 </html>

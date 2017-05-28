@@ -46,7 +46,7 @@ $(function() {
 
     for (var i = 0; i < getFoodFavourites().length; i++) {
 
-      var fav = $("<div class='md-menu-item'><p class='select-schema-item' id=" + i + ">" + getFoodFavourites()[i].school + "</p><div class='fav-item-actions'><i class='material-icons delete-schema-item' id=" + i + ">delete</i></div></div>");
+      var fav = $("<li class='md-menu-item'><p class='select-schema-item' id=" + i + ">" + getFoodFavourites()[i].school + "</p><div class='fav-item-actions'><i class='material-icons delete-schema-item' id=" + i + ">delete</i></div></li>");
 
       if (i == selected) {
         fav.attr("class", "md-menu-item__selected");
@@ -102,7 +102,9 @@ $(function() {
     $.getJSON('https://allorigins.us/get?method=raw&url=' + encodeURIComponent('https://skolmaten.se' + getFoodFavourites()[selected]["id"] + '?&offset='+parseInt(week - getWeekNumber(new Date()))+'&limit=3&fmt=json'), function(data) {
       for (var i = 0; i < 5; i++) {
         if (data.weeks[0].days[i].items) {
-          $(".1-" + i).html(data.weeks[0].days[i].items.join('<br>'));
+          for (var b = 0; b < data.weeks[0].days[i].items.length; b++) {
+              $(".1-" + i).append("<li>"+data.weeks[0].days[i].items[b]+"</li>")
+          }
         } else {
           $(".1-" + i).html("Ingen data");
         }
@@ -111,7 +113,9 @@ $(function() {
       for (var a = 2; a < 4; a++) {
         for (var i = 0; i < 5; i++) {
           if (data.weeks[a - 1].days[i].items) {
-            $("." + a + "-1-" + i).html(data.weeks[a - 1].days[i].items.join('<br>'));
+            for (var b = 0; b < data.weeks[a - 1].days[i].items.length; b++) {
+                $("." + a + "-1-" + i).append("<li>"+data.weeks[a - 1].days[i].items[b]+"</li>")
+            }
           } else {
             $("." + a + "-1-" + i).html("Ingen data");
           }

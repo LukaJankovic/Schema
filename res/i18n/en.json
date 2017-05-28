@@ -22,5 +22,6 @@
   "language": "Language",
   "clear-data": "Clear Data",
   "clear": "Clear",
-  "data-cleared": "Data cleared."
+  "data-cleared": "Data cleared.",
+  "about-text": "Made by Luka Janković 2017. Data collected from Novasoftware and Skolmaten. APIs used:"
 }

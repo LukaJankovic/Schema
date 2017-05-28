@@ -42,7 +42,11 @@ $(document).ready(function() {
 
   openMenu = function() {
 
-    history.pushState(null, document.title, "menu");
+    console.log("open")
+
+    if (!(window.location.href.indexOf("menu") > -1)) {
+      history.pushState(null, document.title, "menu");
+    }
 
     $("#drawer").attr("style", "");
     $("#shade-full").attr("style", "");
@@ -126,15 +130,17 @@ $(document).ready(function() {
         } else {
           closeMenu();
           menuOpening = true;
-          if (window.location.href.indexOf("menu") > -1) {
+          /*if (window.location.href.indexOf("menu") > -1) {
             history.back();
-          }
+          }*/
         }
       } else {
         if (xTravel > (160)) {
           closeMenu();
           menuOpening = true;
-          history.back();
+          /*if (window.location.href.indexOf("menu") > -1) {
+            history.back();
+          }*/
         } else {
           openMenu();
           menuOpening = false;

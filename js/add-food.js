@@ -3,8 +3,8 @@ $(function() {
 
     $.getJSON('https://lserver.alite.am/apps/schema/res/skolmat.json', function(data) {
 
-      let schoolID = "";
-      let id = "";
+      var schoolID = "";
+      var id = "";
 
       for (var i = 0; i < data.length; i++) {
         if ($("#add-skola").val() == (data[i].name + " (" + data[i].city + ")")) {

@@ -22,5 +22,6 @@
   "language": "Språk",
   "clear-data": "Rensa Data",
   "clear": "Rensa",
-  "data-cleared": "Data rensad."
+  "data-cleared": "Data rensad.",
+  "about-text": "Gjord av Luka Janković 2017. Data hämtades ifrån Novasoftware och Skolmaten. APIer som använts:"
 }

@@ -12,6 +12,7 @@ $material-blue-500: #2196F3
 @import menu
 @import schema
 @import snackbar
+@import card
 
 html, body
   overflow: hidden
@@ -47,6 +48,7 @@ html, body
     font-size: 20px
     margin-left: 16px
     font-family: "Roboto"
+    min-width: 258px
 
   i
     cursor: pointer
@@ -244,20 +246,6 @@ html, body
   font-size: 20px
   border-top: 1px solid rgba(0, 0, 0, 0.08)
   padding-top: 8px
-
-.settings-wrapper
-  width: 100%
-  display: flex
-  justify-content: center
-  padding-top: 8px
-
-.settings-card
-  @media screen and (min-width: 768px)
-    width: 50%
-  @media screen and (max-width: 768px)
-    width: calc(100% - 32px)
-  background-color: white
-  box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.16)
 
 #clear-button
   background-color: rgba(0, 0, 0, 0)

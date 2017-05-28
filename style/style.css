@@ -131,6 +131,11 @@
 .spacer {
   width: 100%; }
 
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
 .md-drawer {
   position: fixed;
   height: 100%;
@@ -138,7 +143,9 @@
   z-index: 150;
   top: 0;
   background-color: white;
-  overflow: auto; }
+  overflow: auto;
+  padding: 0;
+  margin: 0; }
 
 .md-drawer__hidden {
   left: -320px;
@@ -224,6 +231,8 @@
     transition: all 0.1s; }
 
 .md-menu {
+  padding: 0;
+  margin: 0;
   position: absolute;
   right: 0;
   display: flex;
@@ -319,7 +328,9 @@
   font-family: "Roboto"; }
   @media screen and (min-width: 768px) {
     .md-snackbar {
-      width: 400px; } }
+      width: 400px;
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px; } }
   @media screen and (max-width: 768px) {
     .md-snackbar {
       width: 100%; } }
@@ -327,6 +338,26 @@
 .md-snackbar__hidden {
   bottom: -48px;
   transition: all 0.2s; }
+
+.md-card-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 8px; }
+
+.md-card {
+  background-color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 2px; }
+  @media screen and (min-width: 768px) {
+    .md-card {
+      width: 50%; } }
+  @media screen and (max-width: 768px) {
+    .md-card {
+      width: calc(100% - 32px); } }
+  .md-card p {
+    padding-left: 16px;
+    padding-right: 16px; }
 
 html, body {
   overflow: hidden;
@@ -360,7 +391,8 @@ html, body {
   .header-content-container h1 {
     font-size: 20px;
     margin-left: 16px;
-    font-family: "Roboto"; }
+    font-family: "Roboto";
+    min-width: 258px; }
   .header-content-container i {
     cursor: pointer; }
   .header-content-container .item-container {
@@ -544,22 +576,6 @@ html, body {
   font-size: 20px;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
   padding-top: 8px; }
-
-.settings-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding-top: 8px; }
-
-.settings-card {
-  background-color: white;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.16); }
-  @media screen and (min-width: 768px) {
-    .settings-card {
-      width: 50%; } }
-  @media screen and (max-width: 768px) {
-    .settings-card {
-      width: calc(100% - 32px); } }
 
 #clear-button {
   background-color: transparent; }
