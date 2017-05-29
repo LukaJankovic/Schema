@@ -26,7 +26,13 @@ $(function() {
   if (window.navigator.standalone) {
     $("meta[name='apple-mobile-web-app-status-bar-style']").remove();
     $('body').prepend("<div style='height: 20px;width: 100%;background-color: #1976D2;'></div>");
+    $('#drawer').prepend("<div style='height: 20px;width: 100%;background-color: #1976D2;'></div>");
   }
+
+  if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
+      $("#firefox").attr("class", "material-icons md-button-fab__icon-firefox");
+      console.log("firefox");
+   }
 });
 
 loadSchemaFavourites = function() {
