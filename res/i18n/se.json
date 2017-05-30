@@ -23,5 +23,13 @@
   "clear-data": "Rensa Data",
   "clear": "Rensa",
   "data-cleared": "Data rensad.",
-  "about-text": "Gjord av Luka Janković 2017. Data hämtades ifrån Novasoftware och Skolmaten. APIer som använts:"
+  "about-text": "Gjord av Luka Janković 2017. Data hämtades ifrån Novasoftware och Skolmaten. APIer som använts:",
+
+  "schema-mon": "Schema för måndag",
+  "schema-tis": "Schema för tisdag",
+  "schema-ons": "Schema för onsdag",
+  "schema-tor": "Schema för torsdag",
+  "schema-fre": "Schema för fredag",
+
+  "schema-week": "Schema för hela veckan"
 }

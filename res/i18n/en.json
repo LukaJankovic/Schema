@@ -23,5 +23,13 @@
   "clear-data": "Clear Data",
   "clear": "Clear",
   "data-cleared": "Data cleared.",
-  "about-text": "Made by Luka Janković 2017. Data collected from Novasoftware and Skolmaten. APIs used:"
+  "about-text": "Made by Luka Janković 2017. Data collected from Novasoftware and Skolmaten. APIs used:",
+
+  "schema-mon": "Schedule for monday",
+  "schema-tis": "Schedule for tuesday",
+  "schema-ons": "Schedule for wednesday",
+  "schema-tor": "Schedule for thursday",
+  "schema-fre": "Schedule for friday",
+
+  "schema-week": "Schedule for the whole week"
 }

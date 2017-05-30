@@ -101,7 +101,7 @@ $(document).ready(function() {
 
       if (dontOpen == false) {
         $("#drawer").attr("class", "md-drawer");
-        $("#drawer").attr("style", `left:${left}px`);
+        $("#drawer").attr("style", "left:"+left+"px");
 
         $("#shade-full").attr("class", "shade-transitioning");
         $("#shade-full").attr("style", "background-color: rgba(0, 0, 0, " + ((1 + (left / 320)) * 0.27) + ")");
