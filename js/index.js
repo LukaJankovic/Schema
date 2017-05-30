@@ -41,6 +41,7 @@ $(function() {
    $("#cookie-accept").click(function() {
       setHasCookie();
       $("#cookie-snackbar").attr("class", "md-snackbar md-snackbar__hidden");
+      $("#cookie-snackbar").remove();
    })
 });
 

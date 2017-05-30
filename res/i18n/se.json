@@ -22,8 +22,9 @@
   "language": "Språk",
   "clear-data": "Rensa Data",
   "clear": "Rensa",
-  "data-cleared": "Data rensad.",
-  "about-text": "Gjord av Luka Janković 2017. Data hämtades ifrån Novasoftware och Skolmaten. APIer som använts:",
+  "data-cleared": "Data rensad",
+  "about-text": "Gjord av Luka Janković 2017. Data hämtades ifrån Novasoftware och Skolmaten. Skolor, klasser, språk lagras i cookies i 365 dagar. APIer som använts:
+",
 
   "schema-mon": "Schema för måndag",
   "schema-tis": "Schema för tisdag",

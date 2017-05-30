@@ -72,9 +72,9 @@
         <i class="material-icons white" id="week-button">today</i>
         <ul class="md-menu md-menu__hidden" id="week-menu">
           <li class="md-menu-item">
-            <p data-i18n="week">
+            <label for="schema-week" data-i18n="week">
               Vecka
-            </p>
+            </label>
             <input class="md-textfield__number" id="schema-week" type="number" name="week" min="1" max="52" />
           </li>
           <li class="md-menu-item" id="this-week">
@@ -115,7 +115,7 @@
   </ul>
   <div class="md-dialog md-dialog__hide" id="add-dialog">
     <h2 data-i18n="add-class">Lägg till klass</h2>
-    <input id="add-skola" type="text" class="md-textfield" list="skolor" id="school-list" placeholder="Skola" data-i18n="[placeholder]school" autocomplete="off" />
+    <input id="add-skola" type="text" class="md-textfield" list="skolor" placeholder="Skola" data-i18n="[placeholder]school" autocomplete="off" />
     <datalist id="skolor">
         </datalist>
     <input id="add-klass" type="text" class="md-textfield" placeholder="Klass" data-i18n="[placeholder]class" autocomplete="off" />
