@@ -97,7 +97,18 @@ getLanguage = function() {
 }
 
 clear = function() {
-    Cookies.remove("lan");
-    Cookies.remove("food");
-    Cookies.remove("schema");
+  Cookies.remove("lan");
+  Cookies.remove("food");
+  Cookies.remove("schema");
+}
+
+hasCookies = function() {
+  if (Cookies.get('c') != "1") return true;
+  return false;
+}
+
+setHasCookie = function() {
+  Cookies.set('c', "1", {
+    expires: 360
+  });
 }

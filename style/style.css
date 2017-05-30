@@ -103,6 +103,9 @@
     background-color: rgba(0, 0, 0, 0.12);
     transition: all 0.2s; }
 
+.md-button-flat__clear {
+  background: transparent; }
+
 .md-button-fab {
   outline: none;
   border: none;
@@ -139,6 +142,9 @@
   margin: 0;
   padding: 0;
   list-style: none; }
+
+img {
+  color: transparent; }
 
 .md-drawer {
   position: fixed;
@@ -326,7 +332,9 @@
   color: white;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding-left: 24px;
+  padding-right: 24px;
   transition: all 0.2s;
   font-size: 14px;
   font-family: "Roboto"; }
@@ -370,7 +378,7 @@ html, body {
   height: 100%; }
 
 .food-body {
-  overflow: visible; }
+  overflow: auto !important; }
 
 @media screen and (max-width: 768px) {
   .desktop {
@@ -585,5 +593,8 @@ html, body {
   background-color: transparent; }
   #clear-button:hover {
     background-color: rgba(0, 0, 0, 0.12); }
+
+#cookie-accept {
+  margin-right: 100px; }
 
 /*# sourceMappingURL=style.css.map */

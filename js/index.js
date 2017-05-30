@@ -33,6 +33,15 @@ $(function() {
       $("#firefox").attr("class", "material-icons md-button-fab__icon-firefox");
       console.log("firefox");
    }
+
+   if (!hasCookies()) {
+      $("#cookie-snackbar").attr("class", "md-snackbar md-snackbar__hidden");
+   }
+
+   $("#cookie-accept").click(function() {
+      setHasCookie();
+      $("#cookie-snackbar").attr("class", "md-snackbar md-snackbar__hidden");
+   })
 });
 
 loadSchemaFavourites = function() {
